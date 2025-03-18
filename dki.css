@@ -1,0 +1,47 @@
+body {
+    background-color: black; /* Nền đen */
+    color: white;
+}
+
+.input-custom {
+    background-color: darkgray;
+    border: 1px solid gray;
+    color: black;
+}
+
+.input-custom:focus {
+    background-color: lightgray;
+    color: black;
+    border-color: limegreen;
+    box-shadow: 0 0 5px limegreen;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: silver;
+}
+
+.toggle-password:hover {
+    color: white;
+}
+
+.btn-success {
+    background-color: green;
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: darkgreen;
+}
+
+.modal-content {
+    border-radius: 15px;
+}
+
+.text-secondary {
+    font-size: 0.9rem;
+}
