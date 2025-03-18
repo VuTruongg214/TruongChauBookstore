@@ -1,47 +1,60 @@
 body {
-    background-color: black; /* Nền đen */
-    color: white;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.header {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #007bff;
+}
+
+.ad-banner {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.ad-img {
+    width: 80%;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 .input-custom {
-    background-color: darkgray;
-    border: 1px solid gray;
-    color: black;
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
 }
 
-.input-custom:focus {
-    background-color: lightgray;
-    color: black;
-    border-color: limegreen;
-    box-shadow: 0 0 5px limegreen;
+.input-custom::placeholder {
+    color: #bbb;
 }
 
 .toggle-password {
     position: absolute;
-    right: 10px;
+    right: 15px;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-    color: silver;
-}
-
-.toggle-password:hover {
-    color: white;
-}
-
-.btn-success {
-    background-color: green;
-    border: none;
-}
-
-.btn-success:hover {
-    background-color: darkgreen;
-}
-
-.modal-content {
-    border-radius: 15px;
-}
-
-.text-secondary {
-    font-size: 0.9rem;
 }
