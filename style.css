@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    padding-top: 60px; /* Tạo khoảng cách để nội dung không bị che bởi navbar */
+    background-color: #222;
+}
+/* Navbar */
+.header {
+    position: fixed; /* Cố định header */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; /* Điều chỉnh chiều cao */
+    background: #e48d7a;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 0px;
+    z-index: 1000; /* Giữ header luôn trên cùng */
+}
+.logo{
+    width: 100%;
+    height: 40px;
+}
+.logohome1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    background: transparent; /* Nền trong suốt */
+}
+
+/* Chữ TC với hiệu ứng chuyển màu */
+.logohome2 {
+    font-size: 40px; /* Kích thước chữ */
+    font-weight: bold;
+    font-family: "Times New Roman", serif; /* Phông chữ */
+    background: linear-gradient(to right, #FF3131, #FF914D); /* Gradient từ đỏ sang cam */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Tô màu bằng gradient */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Đổ bóng nhẹ để nổi bật hơn */
+}
+.navbar {
+    position: fixed;
+    top: 60px; /* Ngay dưới header */
+    left: 0;
+    width: 100%;
+    background: transparent; /* Làm trong suốt nền navbar */
+    z-index: 999;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar li {
+    flex: 1;
+    text-align: center;
+}
+
+.navbar a {
+    display: block;
+    padding: 0px 20px;
+    color: white; /* Giữ màu chữ */
+    text-decoration: none;
+    font-weight: bold;
+    background: white(241, 235, 235, 0.3); /* Độ trong suốt (có thể giảm thêm nếu cần) */
+    transition: background 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    background:#e6e1e1(0, 128, 0, 0.5); /* Làm sáng hơn khi hover */
+    color: rgb(103, 197, 103);
+}
+
+
+/* Tạo khoảng trống cho nội dung bên dưới */
+.main-content {
+    margin-top: 80px; /* Header (50px) + Navbar (50px) */
+}
+
+/* Carousel */
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: #8c8787;
+    float: left;
+    height: 100vh;
+    padding: 20px;
+    color: white;
+}
+
+/* Main content */
+.main-content {
+    display: flex;
+    flex-wrap: wrap; /* Để các khối tự động xuống dòng khi hết chỗ */
+    gap: 20px; /* Khoảng cách giữa các khối */
+    justify-content: space-between; /* Căn đều các khối */
+    padding: 20px; /* Thêm khoảng trống để không bị dính vào mép */
+}
+
+.box {
+    width: calc(20% - 20px); /* Chia thành 5 cột, trừ khoảng cách */
+    height: 250px; /* Điều chỉnh chiều cao */
+    background: #d3d3d3;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box img {
+    max-width: 100%; /* Đảm bảo ảnh không vượt quá khung */
+    max-height: 100%; /* Đảm bảo ảnh vừa khung */
+    border-radius: 5px;
+}
+.clearfix {
+    clear: both;
+}
