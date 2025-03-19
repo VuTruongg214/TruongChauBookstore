@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="static/css/auth.css">
 </head>
 <body>
-
     <!-- Header -->
     <div class="headermain"> 
         <div class="logo"> 
@@ -20,18 +19,7 @@
     </div>
 
     <!-- Navbar -->
-    <div class="navbarmain">
-        <ul class="nav-left">
-            <li><a href="index.html"><div class="logohome1"><div class="logohome2">TC</div></div></a></li>
-            <li><a href="#">Sách nổi bật trong tuần</a></li>
-            <li><a href="#">Tác giả được quan tâm</a></li>
-            <li><a href="#">Sách bộ</a></li>
-            <li><a href="#">Sách lẻ</a></li>
-        </ul>
-        <ul class="nav-right">
-            <li><a href="register.html" data-bs-toggle="modal" data-bs-target="#registerModal">Đăng ký</a></li>
-        </ul>
-    </div>    
+    <!-- Navbar -->
     <div class="navbarmain">
         <ul class="nav-left">
             <li><a href="index.html"><div class="logohome1"><div class="logohome2">TC</div></div></a></li>
@@ -43,14 +31,6 @@
         <a href="#" class="register-btn" data-bs-toggle="modal" data-bs-target="#registerModal">Đăng ký</a>
     </div>
 
-    <!-- Carousel -->
-    <div id="bookCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="static/images/Dale Carnegie.jpg" class="d-block w-100" alt="Bìa sách 1">
-            </div>
-            <div class="carousel-item">
-                <img src="static/images/nguyên phong.jpg" class="d-block w-100" alt="Bìa sách 2">
     <!-- Container để load modal đăng ký -->
     <div id="register-container"></div>
         <!-- Carousel -->
@@ -95,55 +75,21 @@
         </div>
         
                 
-        
     </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Modal Đăng Ký -->
-    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content bg-dark text-white rounded-4 p-4">
-                <div class="modal-header border-0">
-                    <h5 class="modal-title" id="registerModalLabel">Đăng ký tài khoản</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p class="text-center text-secondary">Đăng ký để mua và theo dõi quá trình đọc sách</p>
-                    <form>
-                        <div class="mb-3">
-                            <input type="text" class="form-control input-custom" placeholder="Số điện thoại">
-                        </div>
-                        <div class="mb-3 position-relative">
-                            <input type="password" class="form-control input-custom password-field" placeholder="Mật khẩu">
-                            <!-- <span class="toggle-password">👁️</span> -->
-                            <small class="text-secondary">Mật khẩu bao gồm ít nhất 6 ký tự</small>
-                        </div>
-                        <div class="mb-3 position-relative">
-                            <input type="password" class="form-control input-custom password-field" placeholder="Nhập lại mật khẩu">
-                            <!-- <span class="toggle-password">👁️</span> -->
-                            <small class="text-secondary">Mật khẩu bao gồm ít nhất 6 ký tự</small>
-                        </div>
-                        <button type="submit" class="btn btn-success w-100 py-2">Đăng ký</button>
-                    </form>
-                    <div class="text-center my-3">Hoặc đăng ký với</div>
-                    <div class="d-flex justify-content-center gap-3">
-                        <button class="btn btn-dark border-white px-4"><i class="fab fa-facebook"></i> Facebook</button>
-                        <button class="btn btn-dark border-white px-4"><i class="fab fa-google"></i> Google</button>
-                    </div>
-                    <p class="text-secondary text-center mt-3">
-                        Bằng việc nhấn “Đăng ký”, bạn đã đọc và đồng ý với <a href="#" class="text-white">điều kiện</a> và <a href="#" class="text-white">điều khoản</a> của chúng tôi.
-                    </p>
-                    <div class="text-center">
-                        Bạn đã có tài khoản? <a href="#" class="text-success">Đăng nhập ngay</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- <script src="js/script.js"></script> Liên kết file JS riêng -->
+    <!-- JavaScript để tải modal đăng ký -->
+    <script>    
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch("pages/register.html")
+            .then(response => response.text())
+            .then(data => {
+             document.getElementById("register-container").innerHTML = data;
+         })
+        .catch(error => console.error("Lỗi khi tải trang đăng ký:", error));    
+    });
+    </script>
 
 </body>
 </html>
