@@ -39,7 +39,7 @@ body {
 
 /* Chữ TC với hiệu ứng chuyển màu */
 .logohome2 {
-    font-size: 40px; /* Kích thước chữ */
+    font-size: 60px; /* Kích thước chữ */
     font-weight: bold;
     font-family: "Times New Roman", serif; /* Phông chữ */
     background: linear-gradient(to right, #FF3131, #FF914D); /* Gradient từ đỏ sang cam */
