@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="static/css/auth.css">
 </head>
 <body>
+
     <!-- Header -->
     <div class="headermain"> 
         <div class="logo"> 
@@ -19,7 +20,6 @@
     </div>
 
     <!-- Navbar -->
-    <!-- Navbar -->
     <div class="navbarmain">
         <ul class="nav-left">
             <li><a href="index.html"><div class="logohome1"><div class="logohome2">TC</div></div></a></li>
@@ -28,9 +28,11 @@
             <li><a href="#">Sách bộ</a></li>
             <li><a href="#">Sách lẻ</a></li>
         </ul>
-        <a href="#" class="register-btn" data-bs-toggle="modal" data-bs-target="#registerModal">Đăng ký</a>
-    </div>
-
+        <ul class="nav-right">
+            <li><a href="register.html" data-bs-toggle="modal" data-bs-target="#registerModal">Đăng ký</a></li>
+            <li><a href="login.html" data-bs-toggle="modal" data-bs-target="#registerModal">Đăng nhập</a></li>
+        </ul>
+    </div>    
     <!-- Container để load modal đăng ký -->
     <div id="register-container"></div>
         <!-- Carousel -->
@@ -73,8 +75,6 @@
             <img src="static/images/muonkiepnhansinh.jpg" alt="Sách Đắc Nhân Tâm">
             <div class="book-info">Đắc Nhân Tâm - Dale Carnegie</div>
         </div>
-        
-                
     </div>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -90,6 +90,5 @@
         .catch(error => console.error("Lỗi khi tải trang đăng ký:", error));    
     });
     </script>
-
 </body>
 </html>
