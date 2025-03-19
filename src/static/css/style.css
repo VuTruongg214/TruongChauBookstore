@@ -9,11 +9,13 @@
 }
 body {
     font-family: Arial, sans-serif;
-    padding-top: 60px; /* Tạo khoảng cách để nội dung không bị che bởi navbar */
+    padding-top: 60px; /* Tạo khoảng cách để nội dung không bị che bởi navbarmain
+     */
     background-color: #222;
 }
-/* Navbar */
-.header {
+/* navbarmain
+ */
+.headermain {
     position: fixed; /* Cố định header */
     top: 0;
     left: 0;
@@ -48,16 +50,17 @@ body {
     -webkit-text-fill-color: transparent; /* Tô màu bằng gradient */
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Đổ bóng nhẹ để nổi bật hơn */
 }
-.navbar {
+.navbarmain {
     position: fixed;
     top: 60px; /* Ngay dưới header */
     left: 0;
     width: 100%;
-    background: transparent; /* Làm trong suốt nền navbar */
+    background: transparent; /* Làm trong suốt nền navbarmain
+     */
     z-index: 999;
 }
 
-.navbar ul {
+.navbarmain ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -65,12 +68,12 @@ body {
     justify-content: space-around;
 }
 
-.navbar li {
+.navbarmain li {
     flex: 1;
     text-align: center;
 }
 
-.navbar a {
+.navbarmain a {
     display: block;
     padding: 0px 20px;
     color: white; /* Giữ màu chữ */
@@ -80,7 +83,7 @@ body {
     transition: background 0.3s ease-in-out;
 }
 
-.navbar a:hover {
+.navbarmain a:hover {
     background:#e6e1e1(0, 128, 0, 0.5); /* Làm sáng hơn khi hover */
     color: rgb(103, 197, 103);
 }
@@ -88,7 +91,8 @@ body {
 
 /* Tạo khoảng trống cho nội dung bên dưới */
 .main-content {
-    margin-top: 80px; /* Header (50px) + Navbar (50px) */
+    margin-top: 80px; /* Header (50px) + navbarmain
+     (50px) */
 }
 
 /* Carousel */
