@@ -50,10 +50,10 @@ body {
 
 .navbarmain {
     position: fixed;
-    top: 60px; /* Ngay dưới header */
+    top: 80px; /* Ngay dưới header */
     left: 0;
     width: 100%;
-    background: #222;
+    background: transparent;  /* Loại bỏ nền  */
     z-index: 999;
     display: flex;
     justify-content: space-between; /* Đẩy nhóm bên phải về mép phải */
@@ -70,7 +70,7 @@ body {
 
 .nav-left {
     display: flex;
-    gap: 20px; /* Khoảng cách giữa các mục */
+    gap: 10px; /* Khoảng cách giữa các mục */
 }
 
 .nav-right {
@@ -88,7 +88,9 @@ body {
     color: white;
     font-weight: bold;
     display: block;
-    padding: 10px 15px;
+    padding: 0px 20px;
+    /* background: transparent; */
+    transition: color 0.3s ease-in-out;
 }
 
 .navbarmain a:hover {
