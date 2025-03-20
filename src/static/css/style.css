@@ -117,12 +117,19 @@ body {
 }
 
 /* Main content */
+.moinhat{
+    padding-left: 20px;
+    margin-top: 40px;
+    font-family: Netflix-sans;
+    font-size: 24px;
+}
 .main-content {
     display: flex;
     flex-wrap: wrap; /* Để các khối tự động xuống dòng khi hết chỗ */
     gap: 20px; /* Khoảng cách giữa các khối */
     justify-content: space-between; /* Căn đều các khối */
     padding: 20px; /* Thêm khoảng trống để không bị dính vào mép */
+    margin-top: 0px;
 }
 
 .box {
