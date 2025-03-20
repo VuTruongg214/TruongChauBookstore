@@ -111,6 +111,57 @@
               });
           });
       </script>
-    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Hàm tải và hiển thị modal
+            function loadModal(modalId, filePath) {
+                fetch(filePath)
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById("modal-container").innerHTML = data;
+                        setTimeout(() => {
+                            var modalEl = document.getElementById(modalId);
+                            if (modalEl) {
+                                new bootstrap.Modal(modalEl).show();
+                            } else {
+                                console.error("Không tìm thấy modal:", modalId);
+                            }
+                        }, 100);
+                    })
+                    .catch(error => console.error("Lỗi khi tải modal:", error));
+            }
+        
+            // Chuyển từ Đăng ký -> Đăng nhập
+            document.body.addEventListener("click", function (event) {
+                if (event.target.id === "switchToLogin") {
+                    event.preventDefault();
+                    var registerModalEl = document.getElementById("registerModal");
+                    if (registerModalEl) {
+                        var registerModal = bootstrap.Modal.getInstance(registerModalEl);
+                        if (registerModal) {
+                            registerModal.hide(); // Đóng modal Đăng ký
+                        }
+                    }
+                    loadModal("loginModal", "pages/login.html");
+                }
+            });
+        
+            // Chuyển từ Đăng nhập -> Đăng ký
+            document.body.addEventListener("click", function (event) {
+                if (event.target.id === "switchToRegister") {
+                    event.preventDefault();
+                    var loginModalEl = document.getElementById("loginModal");
+                    if (loginModalEl) {
+                        var loginModal = bootstrap.Modal.getInstance(loginModalEl);
+                        if (loginModal) {
+                            loginModal.hide(); // Đóng modal Đăng nhập
+                        }
+                    }
+                    loadModal("registerModal", "pages/register.html");
+                }
+            });
+        });
+        </script>
+        
 </body>
 </html>
