@@ -248,41 +248,5 @@
             .then(data => document.getElementById('footer').innerHTML = data)
             .catch(error => console.error('Lỗi khi tải footer:', error));
     </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const bookDetails = document.querySelector(".book-details");
-
-            // Kiểm tra phần tử book-details
-            if (!bookDetails) {
-                console.error("Không tìm thấy phần tử .book-details. Đảm bảo đã thêm vào HTML.");
-                return;
-            }
-
-            // Lấy tất cả các sách
-            const bookBoxes = document.querySelectorAll(".box");
-            if (bookBoxes.length === 0) {
-                console.warn("Không có sách nào để hiển thị.");
-                return;
-            }
-
-            // Thêm sự kiện hover
-            bookBoxes.forEach(box => {
-                box.addEventListener("mouseenter", function () {
-                    const bookInfo = this.querySelector(".book-info").textContent || "Thông tin không có sẵn.";
-                    bookDetails.textContent = bookInfo;
-                    bookDetails.style.display = "block";
-
-                    // Cập nhật vị trí bên cạnh sách
-                    const boxRect = this.getBoundingClientRect();
-                    bookDetails.style.top = `${boxRect.top}px`;
-                    bookDetails.style.left = `${boxRect.right + 10}px`;
-                });
-
-                box.addEventListener("mouseleave", function () {
-                    bookDetails.style.display = "none";
-                });
-            });
-        });
-    </script>
 </body>
 </html>
