@@ -152,7 +152,19 @@ body {
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
 }
-
+.book-details {
+    position: fixed;
+    top: 150px;
+    right: 20px;
+    width: 300px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    display: none; /* Ẩn theo mặc định */
+    z-index: 1000;
+}
 /* Hiệu ứng khi di chuột vào ảnh */
 .box:hover img {
     transform: scale(1.1); /* Phóng to nhẹ ảnh */
