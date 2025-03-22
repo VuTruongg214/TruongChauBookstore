@@ -1,11 +1,177 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sách bộ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            padding-top: 60px; /* Tạo khoảng cách để nội dung không bị che bởi navbarmain */
+            background-color: #e48d7a  !important;
+            background: linear-gradient(to top, #6b6b6b, #222);
+        }
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7); /* Màu nền đen mờ */
+            padding: 10px;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-weight: bold;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+        }
+        .navbar ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+            padding: 0;
+            margin: 0;
+        }
+        .navbar li {
+            flex: 1;
+            text-align: center;
+        }
+        .navbar a:hover {
+            background-color: green;
+            color: white;
+        }
+        
+        /* Header */
+        .header {
+            height: 100px;
+            background: #ccc;
+            font-weight: bold;
+            font-size: 50px;
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        /* Carousel */
+        .carousel-item img {
+            height: 400px;
+            object-fit: cover;
+        }
+        /* Main content */
+        .main-content {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        /* Box chứa sách */
+        .box {
+            width: calc(20% - 20px);
+            height: 200px;
+            background: #d3d3d3;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+        footer {
+            background-color: #121212;
+            color: white;
+            padding: 40px 0;
+        }
+
+        footer a {
+            color: #bbb;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+
+
+    </style>
 </head>
 <body>
-    
+
+    <!-- Header -->
+    <div class="header">Những quyển sách hay nhất</div>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">New</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+    </div>
+
+    <!-- Carousel -->
+    <div class="carousel-item img">
+        <img src="../static/images/hinhnen.png" alt="">
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="box">
+            <img src="dachnhantam.jpg" alt="Sách Đắc Nhân Tâm">
+        </div>
+        <div class="box">
+            <img src="muonkiem.jpg" alt="Sách Muôn Kiếp Nhân Sinh">
+        </div>
+        <div class="box">
+            <img src="khoisach.jpg" alt="Sách Khơi Sách">
+        </div>
+        <div class="box">
+            <img src="tuduy.jpg" alt="Sách Tư Duy Nhanh Và Chậm">
+        </div>
+        <div class="box">
+            <img src="trietly.jpg" alt="Sách Triết Lý Cuộc Sống">
+        </div>
+        <div class="box">
+            <img src="tuoitre.jpg" alt="Sách Tuổi Trẻ Đáng Giá Bao Nhiêu">
+        </div>
+        <div class="box">
+            <img src="nambieudo.jpg" alt="Sách Năm Biểu Đồ">
+        </div>
+        <div class="box">
+            <img src="sach8.jpg" alt="Sách 8">
+        </div>
+        <div class="box">
+            <img src="sach9.jpg" alt="Sách 9">
+        </div>
+        <div class="box">
+            <img src="sach10.jpg" alt="Sách 10">
+        </div>
+    </div>
+    <!-- Phần liên hệ cuối trang -->
+    <div id="footer"></div>
+    <script>
+        fetch('/src/pages/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data)
+            .catch(error => console.error('Lỗi khi tải footer:', error));
+    </script>
+
 </body>
 </html>
