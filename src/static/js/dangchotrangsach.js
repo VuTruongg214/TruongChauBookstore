@@ -1,1 +1,0 @@
-// JavaScript cho trang sách
