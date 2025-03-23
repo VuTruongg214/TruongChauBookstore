@@ -1,44 +1,44 @@
-/* Định dạng chung */
-body {
+/* CSS cho trang đăng nhập */
+/* body {
     font-family: Arial, sans-serif;
     background-color: #222;
     color: white;
 }
 
 /* Modal */
-.modal-content {
+/* .modal-content {
     background: #333;
     border-radius: 10px;
-}
+} */
 
 /* Tiêu đề modal */
-.modal-title {
-    font-size: 24px;
+/* .modal-title { */
+    /* font-size: 24px;
     font-weight: bold;
     color: #f8f9fa;
-}
+} */
 
 /* Nút đóng modal */
-.btn-close-white {
+/* .btn-close-white {
     filter: invert(1);
-}
+}  */
 
 /* Form nhập liệu */
-.input-custom {
+/* .input-custom {
     background: #444;
     color: white;
     border: none;
     padding: 12px;
     width: 100%;
     border-radius: 5px;
-}
+} */
 
-.input-custom::placeholder {
+/* .input-custom::placeholder {
     color: #bbb;
-}
+} */
 
 /* Nút đăng nhập */
-.btn-success {
+/* .btn-success {
     background-color: #28a745;
     border: none;
     padding: 12px;
@@ -49,10 +49,10 @@ body {
 
 .btn-success:hover {
     background-color: #218838;
-}
+} */
 
 /* Các nút đăng nhập bằng MXH */
-.btn-dark {
+/* .btn-dark {
     background: #555;
     border: none;
     padding: 10px;
@@ -63,9 +63,9 @@ body {
 
 .btn-dark:hover {
     background: #666;
-}
+} */
 /* Link chuyển đổi giữa đăng nhập và đăng ký */
-.text-success {
+/* .text-success {
     color: #28a745 !important;
     font-weight: bold;
     text-decoration: none;
@@ -73,4 +73,4 @@ body {
 
 .text-success:hover {
     text-decoration: underline;
-}
+} */
