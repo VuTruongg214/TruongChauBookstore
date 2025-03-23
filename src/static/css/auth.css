@@ -73,11 +73,12 @@ body {
 .btn-outline-white {
     background-color: transparent;
     color: white;
-    border: 2px solid white;
+    border: 1px solid white;
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 50px; /* Làm tròn */
     transition: 0.3s;
+    font-weight: bold;
 }
 
 .btn-outline-white:hover {
