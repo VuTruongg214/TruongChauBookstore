@@ -96,11 +96,6 @@ body {
     color: rgb(103, 197, 103);
 }
 
-/* Tạo khoảng trống cho nội dung bên dưới */
-.main-content {
-    margin-top: 80px; /* Header (50px) + navbarmain (50px) */
-}
-
 /* Carousel */
 .carousel-item img {
     height: 400px;
@@ -130,11 +125,10 @@ body {
     gap: 20px; /* Khoảng cách giữa các khối */
     justify-content: space-between; /* Căn đều các khối */
     padding: 20px; /* Thêm khoảng trống để không bị dính vào mép */
-    margin-top: 0px;
 }
 
 .box {
-    position: relative; 
+    position: relative;
     width: calc(15% - 20px); /* Chia thành 5 cột, trừ khoảng cách */
     height: 250px;
     background: linear-gradient(to right, #222, #8c8787);
@@ -142,7 +136,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* Để tránh tràn nội dung */
+    overflow: visible; /* Cho phép hiển thị phần tử vượt ra ngoài */
 }
 
 .box img {
@@ -152,6 +146,7 @@ body {
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
 }
+
 /* Hiệu ứng khi di chuột vào ảnh */
 .box:hover img {
     transform: scale(1.1); /* Phóng to nhẹ ảnh */
@@ -160,21 +155,34 @@ body {
 /* Nội dung thông tin sách */
 .book-info {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Nền đen trong suốt */
+    top: 50%;
+    left: 110%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.9); /* Nền đen trong suốt */
     color: white;
-    text-align: center;
-    padding: 10px;
+    text-align: left;
+    padding: 15px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+    z-index: 10;
+    height: 250px;
 }
 
 /* Hiện thông tin khi hover */
 .box:hover .book-info {
     opacity: 1;
 }
+
+/* Điều chỉnh hướng hiển thị khi có class reverse */
+.box.reverse .book-info {
+    left: auto;
+    right: 110%; /* Hiển thị box bên trái */
+}
+
+
 
 .clearfix {
     clear: both;
