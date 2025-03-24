@@ -137,7 +137,7 @@ body {
     position: relative; 
     width: calc(15% - 20px); /* Chia thành 5 cột, trừ khoảng cách */
     height: 250px;
-    background: linear-gradient(to bottom, #222, #8c8787);
+    background: linear-gradient(to right, #222, #8c8787);
     border-radius: 10px;
     display: flex;
     align-items: center;
