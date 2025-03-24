@@ -135,7 +135,7 @@ body {
 
 .box {
     position: relative; 
-    width: calc(15% - 25px); /* Chia thành 5 cột, trừ khoảng cách */
+    width: calc(15% - 20px); /* Chia thành 5 cột, trừ khoảng cách */
     height: 250px;
     background: linear-gradient(to bottom, #222, #8c8787);
     border-radius: 10px;
