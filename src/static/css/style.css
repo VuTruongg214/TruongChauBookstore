@@ -8,7 +8,7 @@ body {
     font-family: Arial, sans-serif;
     padding-top: 60px; /* Tạo khoảng cách để nội dung không bị che bởi navbarmain */
     background-color: #e48d7a  !important;
-    background: linear-gradient(to top, #6b6b6b, #222);
+    background: linear-gradient(to left, #ff3131, #FF914D,#000);
 }
 /* navbarmain */
 .headermain {
@@ -95,6 +95,7 @@ body {
 .navbarmain a:hover {
     color: rgb(103, 197, 103);
 }
+
 
 /* Carousel */
 .carousel-item img {
