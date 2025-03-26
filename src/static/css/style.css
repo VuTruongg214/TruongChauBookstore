@@ -146,7 +146,14 @@ body {
     justify-content: center;
     overflow: visible; /* Cho phép hiển thị phần tử vượt ra ngoài */
     background: transparent;
+    flex-direction: column;
     
+}
+
+.box h3 {
+    font-size: 18px;
+    color: #333;
+    margin-top: 20px;
 }
 
 .box img {
