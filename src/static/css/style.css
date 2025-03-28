@@ -217,3 +217,25 @@ footer a:hover {
     color: #fff;
 }
 
+/* Toàn bộ thanh cuộn */
+::-webkit-scrollbar {
+    width: 5px; /* Độ rộng của thanh cuộn dọc */
+    height: 5px; /* Độ rộng của thanh cuộn ngang */
+}
+/* Track của thanh cuộn */
+::-webkit-scrollbar-track {
+    background: #000; /* Màu nền của track */
+    border-radius: 10px; /* Bo góc */
+}
+/* Thanh trượt (thumb) */
+::-webkit-scrollbar-thumb {
+    border-radius: 10px; /* Bo góc */
+}
+/* Hiệu ứng hover */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to top, #FF3131, #FF914D); /* Gradient */
+    transition: background 0.3s ease-in-out;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to top, #F1F2B5,#135058);
+}
