@@ -136,17 +136,15 @@ body {
 
 .box {
     position: relative;
-    width: calc(15% - 20px); /* Chia thành 5 cột, trừ khoảng cách */
+    width: calc(20% - 100px); /* Chia thành 5 cột, trừ khoảng cách */
     height: 250px;
-    background: linear-gradient(to right, #222, #8c8787);
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: visible; /* Cho phép hiển thị phần tử vượt ra ngoài */
-    background: transparent;
+    /* background: transparent; */
     flex-direction: column;
-    
 }
 
 .box h3 {
