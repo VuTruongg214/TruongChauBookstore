@@ -35,7 +35,10 @@ body {
     height: 60px;
     background: transparent; /* Nền trong suốt */
 }
-
+.hinhnen{
+    width: 100%; /* Ảnh luôn chiếm toàn bộ chiều rộng */
+    display: block; /* Tránh khoảng trắng dư thừa */
+}
 /* Chữ TC với hiệu ứng chuyển màu */
 .logohome2 {
     font-size: 60px; /* Kích thước chữ */
@@ -151,6 +154,7 @@ body {
     font-size: 18px;
     color: #ffffff;
     margin-top: 20px;
+
 }
 
 .box img {
