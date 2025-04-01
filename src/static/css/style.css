@@ -154,9 +154,13 @@ body {
     font-size: 18px;
     color: #ffffff;
     margin-top: 20px;
-
 }
-
+h3{
+    min-height: 2.5em; /* Điều chỉnh theo số dòng mong muốn */
+    display: flex;
+    align-items: center; /* Căn giữa nếu nội dung ít hơn */
+    text-align: center;
+}
 .box img {
     max-width: 100%;
     max-height: 100%;
