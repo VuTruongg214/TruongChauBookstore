@@ -63,3 +63,49 @@
     padding: 20px;
     color: #f9f9f9;
 }
+.snbslider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 80%;
+    overflow: hidden;
+}
+
+.snbslider-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.snbslider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: max-content; /* Cho phép ảnh xếp liên tục */
+}
+
+.snbslide {
+    min-width: 150px;
+    margin: 10px;
+}
+
+.snbslide img {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.prev-btn, .next-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.prev-btn { left: 0; }
+.next-btn { right: 0; }

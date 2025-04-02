@@ -61,15 +61,74 @@
             <p>Tiểu sử: Tác giả đã viết nhiều sách về ...</p>
         </div>
     </div>
-    <div class="snbsection">
-        <div class="snbrelated-images">
-            <img src="/src//static/images/sachbo/những người khốn khổ.png" alt="Ảnh liên quan 1">
-            <img src="/src//static/images/sachbo/những người khốn khổ.png" alt="Ảnh liên quan 2">
-            <img src="/src//static/images/sachbo/những người khốn khổ.png" alt="Ảnh liên quan 3">
+    <div class="snbslider-container">
+        <button class="prev-btn">&#10094;</button>
+        <div class="snbslider-wrapper">
+            <div class="snbslider">
+            <div class="snbslide"><img src="/src/static/images/noibat/nhungnguoikhonkho1.jpg" alt="Ảnh 1"></div>
+            <div class="snbslide"><img src="/src/static/images/noibat/nhungnguoikhonkho2.jpg" alt="Ảnh 2"></div>
+            <div class="snbslide"><img src="/src/static/images/noibat/sach1.jpg" alt="Ảnh 3"></div>
+            <div class="snbslide"><img src="/src/static/images/noibat/sach2.jpg" alt="Ảnh 4"></div>
+            <div class="snbslide"><img src="/src/static/images/noibat/sach3.jpg" alt="Ảnh 5"></div>
+            <div class="snbslide"><img src="/src/static/images/noibat/sach4.jpg" alt="Ảnh 6"></div>
+            <div class="snbslide"><img src="/src/static/images/noibat/sach5.jpg" alt="Ảnh 7"></div>
+            </div>
         </div>
+        <button class="next-btn">&#10095;</button>
     </div>
     </div>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const slider = document.querySelector(".snbslider");
+        const slides = document.querySelectorAll(".snbslide");
+        const prevBtn = document.querySelector(".prev-btn");
+        const nextBtn = document.querySelector(".next-btn");
+
+        let index = 0;
+        let totalSlides = slides.length;
+
+        // Sao chép toàn bộ ảnh để tạo hiệu ứng vòng lặp
+        for (let i = 0; i < totalSlides; i++) {
+            let clone = slides[i].cloneNode(true);
+            slider.appendChild(clone);
+        }
+
+        function moveSlide(direction) {
+            if (direction === "next") {
+                index++;
+                slider.style.transition = "transform 0.5s ease-in-out";
+            } else {
+                index--;
+                slider.style.transition = "transform 0.5s ease-in-out";
+            }
+
+            slider.style.transform = `translateX(-${index * 160}px)`;
+
+            // Nếu đến cuối danh sách, ngay lập tức quay về ảnh đầu mà không bị giật
+            setTimeout(() => {
+                if (index >= totalSlides) {
+                    index = 0;
+                    slider.style.transition = "none";
+                    slider.style.transform = `translateX(0px)`;
+                }
+                if (index < 0) {
+                    index = totalSlides - 1;
+                    slider.style.transition = "none";
+                    slider.style.transform = `translateX(-${index * 160}px)`;
+                }
+            }, 500);
+        }
+
+        nextBtn.addEventListener("click", () => moveSlide("next"));
+        prevBtn.addEventListener("click", () => moveSlide("prev"));
+
+        // Tự động chạy slider
+        setInterval(() => moveSlide("next"), 3000);
+    });
+
+
+    </script>
     <!-- Java -->
       <!-- JavaScript để tải modal -->
     <script>    
