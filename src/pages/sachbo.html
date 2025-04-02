@@ -232,6 +232,18 @@
                 .catch(error => console.error('Lỗi khi tải footer:', error));
         });
     </script>
-
+    <script>
+        // Lấy phần tử navbarmain
+        const navbar = document.querySelector('.navbarmain');
+    
+        // Lắng nghe sự kiện cuộn trang
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) { // Kiểm tra nếu cuộn quá 50px
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>
