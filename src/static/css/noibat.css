@@ -1,4 +1,35 @@
-.noibat.img{
-    height: 250px;
+.snbcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.snbinfo {
+    width: 25%;
+    padding: 3%;
+    color: #fff;
+}
+.snbbook-image {
     width: 300px;
+    height: 250px;
+}
+.snbbook-image img {
+    width: 100%;
+    height: auto;
+}
+.snbrelated-images {
+    margin-top: 15%;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    flex-wrap: wrap;
+}
+.snbrelated-images img {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+}
+.snbtitle{
+    color: #fff;
+    font-size: 24px;
+    padding: 1%;
 }
