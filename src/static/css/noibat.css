@@ -27,7 +27,8 @@
     align-items: center;
     justify-content: center;
     height: 300px; /* Kích thước cố định */
-    background: linear-gradient(to right, #ffa0a0, #FF914D);
+    background: linear-gradient(to right, #f83737, #504f4f);
+    color: #fff;
 }
 .snbbook-image {
     display: flex;
