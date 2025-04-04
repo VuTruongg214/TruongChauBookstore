@@ -51,15 +51,7 @@ body {
     -webkit-text-fill-color: transparent; /* Tô màu bằng gradient */
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Đổ bóng nhẹ để nổi bật hơn */
 }
-.toptext {
-    font-size: 60px; /* Kích thước chữ */
-    font-weight: bold;
-    font-family: "Times New Roman", serif; /* Phông chữ */
-    background: linear-gradient(to right, rgb(103, 197, 103), #00ff22  ); /* Gradient từ đỏ sang cam */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; /* Tô màu bằng gradient */
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Đổ bóng nhẹ để nổi bật hơn */
-}
+
 .navbarmain {
     position: fixed;
     padding-top: 60px; /* Ngay dưới header */
@@ -114,23 +106,48 @@ body {
     color: rgb(103, 197, 103);
 }
 
-
-/* Carousel */
-.carousel-item img {
-    padding-top: 0%;
+/* Css cho Slidebar */
+.content {
+    width: 100%;
     height: 400px;
-    /* object-fit: cover; */
-    margin-top: 0;
+    background-color: #1f1f1f;
+    display: flex;
+    overflow: hidden;
+    position: relative;
 }
-
-/* Sidebar */
-.sidebar {
-    width: 250px;
-    background: #8c8787;
-    float: left;
-    height: 100vh;
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
-
+.slide {
+    width: 100vw; /* Chiếm hết chiều rộng màn hình */
+    height: 100%;  /* Chiếm hết chiều cao của container */
+    flex-shrink: 0; /* Đảm bảo ảnh không bị thu nhỏ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slide img {
+    width: 100%;    /* Chiếm hết chiều rộng của slide */
+    height: 100%;   /* Chiếm hết chiều cao của slide */
+    object-fit: cover; /* Đảm bảo ảnh phủ đầy ô mà không bị méo */
+}
+.controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+.controls button {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+    border: none;
+    cursor: pointer;
+    height: 100em;
+    width: 50%;
+}
 /* Main content */
 .moinhat{
     padding-left: 20px;
@@ -224,40 +241,70 @@ h3{
 .clearfix {
     clear: both;
 }
-footer {
-    background-color: #121212;
-    color: white;
-    padding: 40px 0;
+/* Css cho footer */
+.footer {
+    background-color: #1b1b1b;
+    padding: 2%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 5%;
 }
 
-footer a {
-    color: #bbb;
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.footer-column p, 
+.footer-column a {
+    font-size: 14px;
+    color: #ccc;
     text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
 }
 
-footer a:hover {
-    color: #fff;
+.footer-column a:hover {
+    color: rgb(103, 197, 103);
+}
+.footer-email {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 10px;
+    
+}
+.footer-text {
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 10px;
+    line-height: 1.5;
+    padding: 2%;
 }
 
-/* Toàn bộ thanh cuộn */
-::-webkit-scrollbar {
-    width: 5px; /* Độ rộng của thanh cuộn dọc */
-    height: 5px; /* Độ rộng của thanh cuộn ngang */
+.footer-apps img {
+    width: 70%;
 }
-/* Track của thanh cuộn */
-::-webkit-scrollbar-track {
-    background: #000; /* Màu nền của track */
-    border-radius: 10px; /* Bo góc */
-}
-/* Thanh trượt (thumb) */
-::-webkit-scrollbar-thumb {
-    border-radius: 10px; /* Bo góc */
-}
-/* Hiệu ứng hover */
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(to top, #FF3131, #FF914D); /* Gradient */
-    transition: background 0.3s ease-in-out;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(to top, #F1F2B5,#135058);
-}
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-column {
+        width: 100%;
+    }
+
+    .footer-email {
+        justify-content: center;
+    }
+

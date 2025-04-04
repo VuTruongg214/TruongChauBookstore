@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TCBook - Mở lối tri thức - Đọc mọi nơi</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="static/css/auth.css">
     <link rel="icon" type="image/png" href="/src/static/images/logohome1.png">
@@ -22,7 +21,7 @@
     <!-- Navbar -->
     <div class="navbarmain">
         <ul class="nav-left">
-            <li><a href="index.html"><div class="logohome1"><div class="logohome2">TCA</div></div></a></li>
+            <li><a href="index.html"><div class="logohome1"><div class="logohome2">TC</div></div></a></li>
             <li><a href="pages/noibattrongtuan.html">Sách nổi bật trong tuần</a></li>
             <li><a href="pages/tacgiadcquantam.html">Tác giả được quan tâm</a></li>
             <li><a href="pages/sachbo.html">Sách bộ</a></li>
@@ -38,34 +37,27 @@
             
         </ul>
     </div>    
-    <!-- Container để tải modal -->
-    <div id="modal-container"></div>
-        <!-- Carousel -->
-        <div id="bookCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="static/images/hinhnen.png" class="d-block w-100" alt="Bìa sách 1">
-                </div>
-                <div class="carousel-item">
-                    <img src="static/images/nguyenphong.png" class="d-block w-100" alt="Bìa sách 2">
+    <!-- Slidebar -->
+    <div class="content">
+        <div class="slider">
+            <div class="slide">
+                <img src="/src/static/images/hinhnen.png" alt="Hình nền" />
             </div>
-            <div class="carousel-item">
-                <img src="static/images/thichdongtam.png" class="d-block w-100" alt="Bìa sách 3">
+            <div class="slide">
+                <img src="/src/static/images/Dale Carnegie.png" alt="Thích đồng tâm" />
             </div>
-            <div class="carousel-item">
-                <img src="static/images/Dale Carnegie.png" class="d-block w-100" alt="Bìa sách 3">
+            <div class="slide">
+                <img src="/src/static/images/thichdongtam.png" alt="Dale Carnegie" />
+            </div>
+            <div class="slide">
+                <img src="/src/static/images/nguyenphong.png" alt="Dale Carnegie" />
             </div>
         </div>
-        <!-- Nút điều hướng -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#bookCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#bookCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </button>
+        <div class="controls">
+            <button onclick="prevSlide()"></button>
+            <button onclick="nextSlide()"></button>
+        </div>
     </div>
-    <div class="book-details"></div>
-
     <!-- Main Content -->
     <h1 class="moinhat">Mới nhất</h1> <br>
     <div class="main-content">
@@ -212,100 +204,96 @@
             </div>
         </div>
     </div>
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- JavaScript để tải modal -->
-    <script>    
-        document.addEventListener("DOMContentLoaded", function() {
-            // Xử lý khi nhấn "Đăng ký"
-            document.getElementById("openRegister").addEventListener("click", function(event) {
-                event.preventDefault();
-                fetch("pages/register.html")
-                    .then(response => response.text())
-                    .then(data => {
-                        document.getElementById("modal-container").innerHTML = data;
-                        new bootstrap.Modal(document.getElementById("registerModal")).show();
-                    })
-                    .catch(error => console.error("Lỗi khi tải trang đăng ký:", error));
-            });
-
-            // Xử lý khi nhấn "Đăng nhập"
-            document.getElementById("openLogin").addEventListener("click", function(event) {
-                event.preventDefault();
-                fetch("pages/login.html")
-                    .then(response => response.text())
-                    .then(data => {
-                        document.getElementById("modal-container").innerHTML = data;
-                        new bootstrap.Modal(document.getElementById("loginModal")).show();
-                    })
-                    .catch(error => console.error("Lỗi khi tải trang đăng nhập:", error));
-            });
-        });
-    </script>
+    <!-- Java cho phần chuyển hình ảnh slidebar -->
     <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // Hàm tải và hiển thị modal
-        function loadModal(modalId, filePath) {
-            fetch(filePath)
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById("modal-container").innerHTML = data;
-                    setTimeout(() => {
-                        var modalEl = document.getElementById(modalId);
-                        if (modalEl) {
-                            new bootstrap.Modal(modalEl).show();
-                        } else {
-                            console.error("Không tìm thấy modal:", modalId);
-                        }
-                    }, 100);
-                })
-                .catch(error => console.error("Lỗi khi tải modal:", error));
-        }
-    
-        // Chuyển từ Đăng ký -> Đăng nhập
-        document.body.addEventListener("click", function (event) {
-            if (event.target.id === "switchToLogin") {
-                event.preventDefault();
-                var registerModalEl = document.getElementById("registerModal");
-                if (registerModalEl) {
-                    var registerModal = bootstrap.Modal.getInstance(registerModalEl);
-                    if (registerModal) {
-                        registerModal.hide(); // Đóng modal Đăng ký
-                    }
-                }
-                loadModal("loginModal", "pages/login.html");
-            }
-        });
-    
-        // Chuyển từ Đăng nhập -> Đăng ký
-        document.body.addEventListener("click", function (event) {
-            if (event.target.id === "switchToRegister") {
-                event.preventDefault();
-                var loginModalEl = document.getElementById("loginModal");
-                if (loginModalEl) {
-                    var loginModal = bootstrap.Modal.getInstance(loginModalEl);
-                    if (loginModal) {
-                        loginModal.hide(); // Đóng modal Đăng nhập
-                    }
-                }
-                loadModal("registerModal", "pages/register.html");
-            }
-        });
-    });
-    </script>
+        let currentIndex = 0;
+         const slides = document.querySelectorAll(".slide");
+         const slider = document.querySelector(".slider");
+ 
+         // Hàm để hiển thị slide tại vị trí chỉ định
+         function showSlide(index) {
+             if (index >= slides.length) {
+                 // Khi đến ảnh cuối cùng, chuyển đến ảnh đầu tiên mà không có sự gián đoạn
+                 currentIndex = 0;
+                 slider.style.transition = 'none'; // Tắt hiệu ứng chuyển động
+                 slider.style.transform = `translateX(0)`; // Di chuyển về ảnh đầu tiên
+                 setTimeout(() => {
+                     slider.style.transition = 'transform 0.5s ease-in-out'; // Bật lại hiệu ứng chuyển động
+                     showSlide(currentIndex + 1); // Sau khi quay lại ảnh đầu tiên, chuyển sang ảnh tiếp theo
+                 }, 50); // Đảm bảo hiệu ứng không bị gián đoạn
+             } else if (index < 0) {
+                 // Khi đến ảnh đầu tiên, quay lại ảnh cuối
+                 currentIndex = slides.length - 1;
+             } else {
+                 currentIndex = index;
+             }
+ 
+             // Thiết lập chuyển động của slider
+             slider.style.transform = `translateX(-${currentIndex * 100}vw)`;
+         }
+ 
+         // Hàm xử lý chuyển đến slide tiếp theo
+         function nextSlide() {
+             showSlide(currentIndex + 1);
+         }
+ 
+         // Hàm xử lý chuyển về slide trước
+         function prevSlide() {
+             showSlide(currentIndex - 1);
+         }
+ 
+         // Tự động chuyển slide mỗi 3 giây
+         setInterval(nextSlide, 5000);
+     </script>
+
+
     <!-- Phần liên hệ cuối trang -->
-    <div id="footer"></div>
-    <script>
-        fetch('pages/footer.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('footer').innerHTML = data)
-            .catch(error => console.error('Lỗi khi tải footer:', error));
-    </script>
+    <div class="footer">
+        <!-- Cột 1: Logo và Email -->
+        <div class="footer-column">
+            <a href="index.html"><div class="logohome2">TC</div></a>
+            <p>Công ty cổ phần sách điện tử TruongChau</p>
+            <div class="footer-email">
+                <p>TruongChau@gmail.com</p>
+            </div>
+        </div>
+
+        <!-- Cột 2: Về chúng tôi -->
+        <div class="footer-column">
+            <h3>Về chúng tôi</h3>
+            <a href="#">Giới thiệu</a>
+            <a href="#">Cơ cấu tổ chức</a>
+            <a href="#">Lĩnh vực hoạt động</a>
+        </div>
+
+        <!-- Cột 3: Thông tin hữu ích -->
+        <div class="footer-column">
+            <h3>Thông tin hữu ích</h3>
+            <a href="#">Thỏa thuận sử dụng dịch vụ</a>
+            <a href="#">Quyền lợi</a>
+            <a href="#">Quy định riêng tư</a>
+        </div>
+
+        <!-- Cột 4: Tải ứng dụng -->
+        <div class="footer-column">
+            <h3>Tải ứng dụng</h3>
+            <div class="footer-apps">
+                <img src="static/images/app-store.png" alt="App Store">
+                <img src="static/images/google-play.png" alt="Google Play">
+            </div>
+        </div>
+    </div>
+    <p class="footer-text">
+        Công ty Cổ phần Sách điện tử TruongChau - Phòng A302 , Số 235 đường Hoàng Quốc Việt, Phường Cổ Nhuế 1, Quận Bắc Từ Liêm, Thành phố Hà Nội. <br>
+                ĐKKD số 0108796432 do SKHĐT TP Hà Nội cấp ngày 26/03/2025 <br>
+                Giấy xác nhận Đăng ký hoạt động phát hành xuất bản phẩm điện tử số 8132/XN-CXBIPH do Cục Xuất bản, In và Phát hành cấp ngày 06/05/2025 <br>
+                Giấy chứng nhận Đăng ký cung cấp dịch vụ nội dung thông tin trên mạng Viễn thông di động số 19/GCN-DĐ do Cục Phát thanh, truyền hình và thông tin điện tử ký ngày 30/04/2025 <br>
+                Số VPGD: 024.73086543 | Số CSKH: 1900545482 nhánh 5 | Hotline: 0877736289
+    </p>
     <script>
         // Lấy phần tử navbarmain
         const navbar = document.querySelector('.navbarmain');
-
+    
         // Lắng nghe sự kiện cuộn trang
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) { // Kiểm tra nếu cuộn quá 50px
@@ -315,6 +303,5 @@
             }
         });
     </script>
-    
 </body>
 </html>
