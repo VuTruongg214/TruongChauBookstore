@@ -55,6 +55,15 @@
     left: -100px;
     
 }
+.toptext {
+    font-size: 60px; /* Kích thước chữ */
+    font-weight: bold;
+    font-family: "Times New Roman", serif; /* Phông chữ */
+    background: linear-gradient(to right, rgb(103, 197, 103), #00ff22  ); /* Gradient từ đỏ sang cam */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Tô màu bằng gradient */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Đổ bóng nhẹ để nổi bật hơn */
+}
 /* Nếu là số chẵn, chuyển nó sang trái */
 .snbcontainer:nth-child(even) .top-container {
     left: -50px;
