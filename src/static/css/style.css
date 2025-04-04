@@ -236,8 +236,6 @@ h3{
     right: 110%; /* Hiển thị box bên trái */
 }
 
-
-
 .clearfix {
     clear: both;
 }
@@ -253,8 +251,8 @@ h3{
 
 .footer-column {
     flex: 1;
-    min-width: 200px;
-    margin-bottom: 20px;
+    min-width: 300px;
+    color: white;
 }
 
 .footer-column h3 {
@@ -273,7 +271,7 @@ h3{
 }
 
 .footer-column a:hover {
-    color: rgb(103, 197, 103);
+    color: white;
 }
 .footer-email {
     display: flex;
@@ -283,7 +281,7 @@ h3{
     
 }
 .footer-text {
-    font-size: 12px;
+    font-size: 15px;
     color: #aaa;
     margin-top: 10px;
     line-height: 1.5;
@@ -291,7 +289,7 @@ h3{
 }
 
 .footer-apps img {
-    width: 70%;
+    width: 50%;
 }
 
 @media (max-width: 768px) {
