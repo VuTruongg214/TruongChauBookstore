@@ -28,25 +28,33 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    height: 300px; /* Kích thước cố định */
+    height: 350px; /* Kích thước cố định */
     background: linear-gradient(to right, #f83737, #504f4f);
     color: #fff;
     position: relative;
+    width: 100%;
 }
 
 /* Định dạng vị trí của các phần tử Top */
 .top-container {
-    position: absolute;
+    
     font-size: 40px;
     font-weight: bold;
     color: black;
+    position: relative;
+    display: inline-block; /* Hiển thị mỗi nhãn "Top" trên một dòng riêng */
+
 }
 
 /* Mặc định "Top" nằm bên phải */
 .top-right {
-    right: -50px;
+    right: -100px;
+    
 }
-
+.top-left{
+    left: -100px;
+    
+}
 /* Nếu là số chẵn, chuyển nó sang trái */
 .snbcontainer:nth-child(even) .top-container {
     left: -50px;
