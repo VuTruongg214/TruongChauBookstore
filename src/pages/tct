@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/static/css/auth.css">
+    <link rel="stylesheet" href="/src/static/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" >
+    <link rel="icon" href="/src/static/images/logohome1.png"type="image/png">
+    <link rel="stylesheet" href="/src/static/css/noibat.css">
+    <title>About us</title>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="headermain"> 
+        <div class="logo"> 
+            <img src="/src/static/images/logo.png" class="hinhnen">
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="navbarmain">
+        <ul class="nav-left">
+            <li><a href="/src/index.html"><div class="logohome1"><div class="logohome2">TC</div></div></a></li>
+            <li><a href="/src/pages/noibattrongtuan.html">Sách nổi bật trong tuần</a></li>
+            <li><a href="/src/pages/tacgiadcquantam.html">Tác giả được quan tâm</a></li>
+            <li><a href="/src/pages/sachbo.html">Sách bộ</a></li>
+            <li><a href="/src/pages/sachle.html">Sách lẻ</a></li>
+        </ul>
+        <ul class="nav-right">
+            <li>
+                <a href="/src/pages/register.html"><button class="btn-outline-white">Đăng ký</button></a>
+            </li>
+            <li>
+                <a href="/src/pages/login.html"><button class="btn-outline-white">Đăng nhập</button></a>
+            </li> 
+        </ul>
+    </div>    
