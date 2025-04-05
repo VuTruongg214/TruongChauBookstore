@@ -1,0 +1,18 @@
+.bookscontainer {
+    margin-left: 40px;
+    margin-top: 80px;
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    gap: 20px;            /* Khoảng cách giữa ảnh và chữ */
+    padding: 20px;
+}
+  
+.booksimage {
+    width: 400px;
+    height: 500px;
+    border-radius: 10px;  /* Bo tròn ảnh nếu thích */
+}
+  
+.book-info {
+    flex: 1;
+}
