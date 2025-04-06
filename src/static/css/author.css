@@ -1,4 +1,3 @@
-/*  CSS chính cho trang web */
 * {
     margin: 0;
     padding: 0;
@@ -7,9 +6,7 @@
 body {
     font-family: Arial, sans-serif;
     padding-top: 60px; /* Tạo khoảng cách để nội dung không bị che bởi navbarmain */
-    background-color: #e48d7a  !important;
-    background: linear-gradient(to top, #222,#135058);
-    font-family: Arial, sans-serif;
+    background:white
 }
 /* navbarmain */
 .headermain {
@@ -113,40 +110,7 @@ body {
     display: flex;
     overflow: hidden;
     position: relative;
-}
-.slider {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-.slide {
-    width: 100vw; /* Chiếm hết chiều rộng màn hình */
-    height: 100%;  /* Chiếm hết chiều cao của container */
-    flex-shrink: 0; /* Đảm bảo ảnh không bị thu nhỏ */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.slide img {
-    width: 100%;    /* Chiếm hết chiều rộng của slide */
-    height: 100%;   /* Chiếm hết chiều cao của slide */
-    object-fit: cover; /* Đảm bảo ảnh phủ đầy ô mà không bị méo */
-}
-.controls {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-}
-.controls button {
-    background-color: rgba(0, 0, 0, 0.1);
-    color: white;
-    border: none;
-    cursor: pointer;
-    height: 100em;
-    width: 50%;
-}
+}   
 /* Main content */
 .moinhat{
     padding-left: 20px;
@@ -162,45 +126,6 @@ body {
     justify-content: space-between; /* Căn đều các khối */
     padding: 20px; /* Thêm khoảng trống để không bị dính vào mép */
 }
-
-.box {
-    position: relative;
-    width: calc(20% - 100px); /* Chia thành 5 cột, trừ khoảng cách */
-    height: 250px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: visible; /* Cho phép hiển thị phần tử vượt ra ngoài */
-    /* background: transparent; */
-    flex-direction: column;
-}
-
-.box h3 {
-    font-size: 18px;
-    color: #ffffff;
-    margin-top: 20px;
-}
-h3{
-    min-height: 2.5em; /* Điều chỉnh theo số dòng mong muốn */
-    display: flex;
-    align-items: center; /* Căn giữa nếu nội dung ít hơn */
-    text-align: center;
-}
-.box img {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 10px;
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
-}
-
-/* Hiệu ứng khi di chuột vào ảnh */
-.box:hover img {
-    transform: scale(1.1); /* Phóng to nhẹ ảnh */
-}
-
-/* Nội dung thông tin sách */
 .book-info {
     position: absolute;
     top: 35%;
@@ -210,7 +135,7 @@ h3{
     color: white;
     text-align: left;
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 0px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
@@ -221,23 +146,6 @@ h3{
     max-height: 250px; /* Giới hạn chiều cao */
     overflow-y: auto; /* Tạo thanh cuộn nếu nội dung quá dài */
 }
-
-/* Hiện thông tin khi hover */
-.box:hover .book-info,
-.book-info:hover {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-/* Điều chỉnh hướng hiển thị khi có class reverse */
-.box.reverse .book-info {
-    left: auto;
-    right: 110%; /* Hiển thị box bên trái */
-}
-
-.clearfix {
-    clear: both;
-}
 /* Css cho footer */
 .footer {
     background-color: #1b1b1b;
@@ -247,7 +155,24 @@ h3{
     flex-wrap: wrap;
     margin-top: 5%;
 }
+.author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
 
+.author-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 20px; /* Bo tròn ảnh */
+}
+.author h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+}
 .footer-column {
     flex: 1;
     min-width: 300px;
@@ -291,16 +216,3 @@ h3{
     width: 50%;
 }
 
-@media (max-width: 768px) {
-    .footer {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-column {
-        width: 100%;
-    }
-
-    .footer-email {
-        justify-content: center;
-    }
