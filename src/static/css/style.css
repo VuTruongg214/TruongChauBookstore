@@ -9,7 +9,6 @@ body {
     padding-top: 60px; /* Tạo khoảng cách để nội dung không bị che bởi navbarmain */
     background-color: #e48d7a  !important;
     background: linear-gradient(to top, #222,#135058);
-    font-family: Arial, sans-serif;
 }
 /* navbarmain */
 .headermain {
