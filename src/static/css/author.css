@@ -8,6 +8,56 @@ body {
     padding-top: 60px; /* Tạo khoảng cách để nội dung không bị che bởi navbarmain */
     background:white
 }
+.container {
+    padding: 30px 60px;
+  }
+  h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .filter-sort {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .author-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+  }
+  
+  .author-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .author-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .author-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .author-card h3 {
+    font-size: 18px;
+    margin: 15px;
+  }
+  
+  .author-card p {
+    font-size: 14px;
+    color: #555;
+    margin: 0 15px 15px 15px;
+  }
 /* navbarmain */
 .headermain {
     position: fixed; /* Cố định header */
@@ -129,9 +179,8 @@ body {
 .book-info {
     position: absolute;
     top: 100%;
-
-    background: rgba(0, 0, 0, 0.9); /* Nền đen trong suốt */
-    color: white;
+    background: white; /* Nền đen trong suốt */
+    color: #828282;
     text-align: left;
     padding: 15px;
     border-radius: 0px;
@@ -145,29 +194,6 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 5%;
-}
-.author {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.author-img {
-    width: 250px;
-    height: 250px;
-    border-radius: 20px; /* Bo tròn ảnh */
-}
-.author h3 {
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-    margin: 0;
-}
-.footer-column {
-    flex: 1;
-    min-width: 300px;
-    color: white;
 }
 
 .footer-column h3 {
