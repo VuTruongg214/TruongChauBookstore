@@ -88,4 +88,16 @@
     max-width: 500px;
     border-radius: 20px;
 }
-  
+.anhtg {
+    border-radius: 10px;
+    overflow: hidden;
+}
+.tgblock {
+    margin-top: 90px;
+    width: 300px;
+    height: 400px;
+    margin: 60px;
+    font-family: Arial, sans-serif;
+    max-width: 100%;
+    align-items: center;
+}
