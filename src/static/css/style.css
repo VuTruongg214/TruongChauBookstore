@@ -247,12 +247,6 @@ h3{
     margin-top: 5%;
 }
 
-.footer-column {
-    flex: 1;
-    min-width: 300px;
-    color: white;
-}
-
 .footer-column h3 {
     font-size: 18px;
     margin-bottom: 15px;
@@ -288,19 +282,4 @@ h3{
 
 .footer-apps img {
     width: 50%;
-}
-
-@media (max-width: 768px) {
-    .footer {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-column {
-        width: 100%;
-    }
-
-    .footer-email {
-        justify-content: center;
-    }
 }
