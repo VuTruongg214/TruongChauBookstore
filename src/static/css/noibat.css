@@ -34,7 +34,9 @@
     position: relative;
     width: 100%;
 }
-
+p {
+    line-height: 150%;
+}
 /* Định dạng vị trí của các phần tử Top */
 .top-container {
     
