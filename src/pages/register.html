@@ -126,5 +126,24 @@
             <a href="/src/index.html" style="color: white;"><u>Trở về trang chủ</u></a>
         </div>
     </div>
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const phone = document.querySelector('input[placeholder="Số điện thoại"]').value.trim();
+            const password = document.querySelector('input[placeholder="Mật khẩu"]').value.trim();
+            const confirmPassword = document.querySelector('input[placeholder="Nhập lại mật khẩu"]').value.trim();
+
+            if (!phone || !password || !confirmPassword) {
+                alert('Vui lòng không để trống thông tin cần nhập!');
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                alert('Mật khẩu và Nhập lại mật khẩu không khớp!');
+                return;
+            }
+            window.location.href = "/src/pages/login.html";
+        });
+    </script>
 </body>
 </html>
