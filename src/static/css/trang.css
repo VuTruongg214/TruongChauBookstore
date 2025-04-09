@@ -6,14 +6,14 @@
 }
 body {
     font-family: Arial, sans-serif;
-    padding-top: 60px; /* Tạo khoảng cách để nội dung không bị che bởi navbarmain */
+     /* Tạo khoảng cách để nội dung không bị che bởi navbarmain */
     background-color: #e48d7a  !important;
     background: linear-gradient(to top, #222,#135058);
 }
 .container {
 display: flex;
 max-width: 100%;
-margin-top: 150px;
+margin-top: 0px;
 padding: 30px;
 background-color: #222;
 border-radius: 20px;
@@ -73,9 +73,9 @@ text-align: center;
 }
 
 .author-photo img {
-width: 100px;
+width: 80%;
 height: auto;
-border-radius: 50%;
+border-radius: 10%;
 box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
@@ -87,7 +87,7 @@ color: #ddd;
 
 .back-link {
 display: inline-block;
-margin-top: 30px;
+margin-top: 25%;
 padding: 10px 20px;
 background: #fff;
 color: #04364A;
@@ -104,7 +104,7 @@ background: #ddd;
 
 /* navbarmain */
 .headermain {
-    position: fixed; /* Cố định header */
+    /* position: fixed; Cố định header */
     top: 0;
     left: 0;
     width: 100%;
@@ -113,7 +113,7 @@ background: #ddd;
     font-size: 20px;
     text-align: center;
     padding-top: 0px;
-    z-index: 1000; /* Giữ header luôn trên cùng */
+    /* Giữ header luôn trên cùng */
 }
 .logo{
     width: 100%;
@@ -143,12 +143,12 @@ background: #ddd;
 }
 
 .navbarmain {
-    position: fixed;
+    /* position: fixed; */
     padding-top: 60px; /* Ngay dưới header */
     left: 0;
     width: 100%;
     /* background: transparent;  Loại bỏ nền  */
-    z-index: 999;
+    /* z-index: 999; */
     display: flex;
     justify-content: space-between; /* Đẩy nhóm bên phải về mép phải */
     align-items: center;

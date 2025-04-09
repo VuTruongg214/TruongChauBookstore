@@ -9,27 +9,23 @@
   <title>Chi tiết sách</title>
 </head>
 <body>
-        <!-- Header -->
-        <div class="headermain"> 
-            <div class="logo"> 
-                <img class="hinhnen" src="/src/static/images/logo.png">
-            </div>
-        </div>
-    
-        <!-- Navbar -->
-        <div class="navbarmain">
-            <ul class="nav-left">
-                <li><a href="/src/index.html"><div class="logohome1"><div class="logohome2">TC</div></div></a></li>
-                <li><a href="pages/noibattrongtuan.html">Sách nổi bật trong tuần</a></li>
-                <li><a href="pages/author1.html">Tác giả được quan tâm</a></li>
-                <li><a href="pages/sachbo.html">Sách bộ</a></li>
-                <li><a href="pages/sachle.html">Sách lẻ</a></li>
-            </ul>
-            <ul class="nav-right">
-                <li><a href="pages/register.html"><button class="btn-outline-white">Đăng ký</button></a></li>
-                <li><a href="pages/login.html"><button class="btn-outline-white">Đăng nhập</button></a></li>
-            </ul>
-        </div>   
+    <div class="navbarmain">
+        <ul class="nav-left">
+            <li><a href="/src/index.html"><div class="logohome1"><div class="logohome2">TC</div></div></a></li>
+            <li><a href="/src/pages/noibattrongtuan.html">Sách nổi bật trong tuần</a></li>
+            <li><a href="/src/pages/author1.html">Tác giả được quan tâm</a></li>
+            <li><a href="/src/pages/sachbo.html">Sách bộ</a></li>
+            <li><a href="/src/pages/sachle.html">Sách lẻ</a></li>
+        </ul>
+        <ul class="nav-right">
+            <li>
+                <a href="/src/pages/register.html"><button class="btn-outline-white">Đăng ký</button></a>
+            </li>
+            <li>
+                <a href="/src/pages/login.html"><button class="btn-outline-white">Đăng nhập</button></a>
+            </li>
+        </ul>
+    </div>    
   <div class="container">
     <div class="book-image">
       <img id="book-image" src="" alt="Bìa sách">
@@ -37,8 +33,7 @@
     <div class="bookinfo">
       <div class="book-title" id="book-title"></div>
       <div class="book-meta"><span>Tác giả:</span> <span id="book-author"></span></div>
-      <div class="book-meta"><span>Thể loại:</span> Tiểu thuyết</div>
-      <div class="book-meta"><span>Nhà xuất bản:</span> Kim Đồng</div>
+      
 
       <div class="book-description-block">
         <div class="book-description" id="book-description"></div>
@@ -87,20 +82,23 @@
         Số VPGD: 024.73086543 | Số CSKH: 1900545482 nhánh 5 | Hotline: 0877736289
     </p>
     </footer>
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const title = params.get('title') 
-    const img = params.get('img') || 'placeholder.jpg';
-    const desc = params.get('desc') || 'Không có mô tả.';
-    const author = params.get('author') || 'khong co ten tac gia';
-    const authorImg = params.get('authorImg') || 'https://via.placeholder.com/100x100?text=No+Image';
-
-    document.getElementById('book-title').textContent = decodeURIComponent(title);
-    document.getElementById('book-image').src = decodeURIComponent(img);
-    document.getElementById('book-description').textContent = decodeURIComponent(desc);
-    document.getElementById('book-author').textContent = decodeURIComponent(author);
-    document.getElementById('author-name').textContent = decodeURIComponent(author);
-    document.getElementById('author-img').src = decodeURIComponent(authorImg);
-  </script>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+      
+        const title = params.get('title') || 'Không có tiêu đề';
+        const img = params.get('img') || 'placeholder.jpg';
+        const decodedImg = decodeURIComponent(img)
+        const desc = params.get('desc') || 'Không có mô tả.';
+        const author = params.get('author') || 'không có tên tác giả';
+        const authorImg = params.get('authorImg') || 'https://via.placeholder.com/100x100?text=No+Image';
+      
+        document.getElementById('book-title').textContent = title;
+        document.getElementById('book-image').src = decodedImg;
+        document.getElementById('book-description').textContent = desc;
+        document.getElementById('book-author').textContent = author;
+        document.getElementById('author-name').textContent = author;
+        document.getElementById('author-img').src = authorImg;
+      </script>
+      
 </body>
 </html>
