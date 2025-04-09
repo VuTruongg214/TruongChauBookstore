@@ -1,154 +1,106 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/src/static/css/auth.css">
-    <link rel="stylesheet" href="/src/static/css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" >
-    <link rel="icon" href="/src/static/images/logohome1.png"type="image/png">
-    <link rel="stylesheet" href="/src/static/css/noibat.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="/src/static/css/trang.css">
-    <title>trangchitiet</title>
+    <link rel="stylesheet" href="/src/static/css/auth.css">
+    <link rel="icon" type="image/png" href="/src/static/images/logohome1.png">
+  <title>Chi tiết sách</title>
 </head>
 <body>
+        <!-- Header -->
+        <div class="headermain"> 
+            <div class="logo"> 
+                <img class="hinhnen" src="/src/static/images/logo.png">
+            </div>
+        </div>
+    
+        <!-- Navbar -->
+        <div class="navbarmain">
+            <ul class="nav-left">
+                <li><a href="/src/index.html"><div class="logohome1"><div class="logohome2">TC</div></div></a></li>
+                <li><a href="pages/noibattrongtuan.html">Sách nổi bật trong tuần</a></li>
+                <li><a href="pages/author1.html">Tác giả được quan tâm</a></li>
+                <li><a href="pages/sachbo.html">Sách bộ</a></li>
+                <li><a href="pages/sachle.html">Sách lẻ</a></li>
+            </ul>
+            <ul class="nav-right">
+                <li><a href="pages/register.html"><button class="btn-outline-white">Đăng ký</button></a></li>
+                <li><a href="pages/login.html"><button class="btn-outline-white">Đăng nhập</button></a></li>
+            </ul>
+        </div>   
+  <div class="container">
+    <div class="book-image">
+      <img id="book-image" src="" alt="Bìa sách">
+    </div>
+    <div class="bookinfo">
+      <div class="book-title" id="book-title"></div>
+      <div class="book-meta"><span>Tác giả:</span> <span id="book-author"></span></div>
+      <div class="book-meta"><span>Thể loại:</span> Tiểu thuyết</div>
+      <div class="book-meta"><span>Nhà xuất bản:</span> Kim Đồng</div>
 
-    <!-- Header -->
-    <div class="headermain"> 
-        <div class="logo"> 
-            <img src="/src/static/images/logo.png" class="hinhnen">
+      <div class="book-description-block">
+        <div class="book-description" id="book-description"></div>
+        <div class="author-photo">
+          <img id="author-img" src="" alt="Tác giả">
+          <div class="author-caption" id="author-name"></div>
+        </div>
+      </div>
+
+      <a class="back-link" href="/src/index.html">← Quay lại trang chủ</a>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer-column" style="text-align: center;">
+        <a href="/src/index.html"><div class="logohome2" style="margin: 0 auto;">TC</div></a>
+        <p>Công ty cổ phần sách điện tử TruongChauAnh</p>
+        <div class="footer-email" style="display: flex; align-items: center; justify-content: center;">
+        <img src="/src/static/images/gmail.png" alt="Gmail Icon" style="width: 30px; height: 30px; margin-right: 5px;">
+        <p><br>TruongChauAnh@gmail.com</p>
         </div>
     </div>
-
-    <!-- Navbar -->
-    <div class="navbarmain">
-        <ul class="nav-left">
-            <li><a href="/src/index.html"><div class="logohome1"><div class="logohome2">TC</div></div></a></li>
-            <li><a href="/src/pages/noibattrongtuan.html">Sách nổi bật trong tuần</a></li>
-            <li><a href="/src/pages/author1.html">Tác giả được quan tâm</a></li>
-            <li><a href="/src/pages/sachbo.html">Sách bộ</a></li>
-            <li><a href="/src/pages/sachle.html">Sách lẻ</a></li>
-        </ul>
-        <ul class="nav-right">
-            <li>
-                <a href="/src/pages/register.html"><button class="btn-outline-white">Đăng ký</button></a>
-            </li>
-            <li>
-                <a href="/src/pages/login.html"><button class="btn-outline-white">Đăng nhập</button></a>
-            </li> 
-        </ul>
-    </div>    
-    <div class="bookscontainer">
-        <div class="book-block">
-            <div class="breadcrumb">
-              <a href="/src/index.html">Trang chủ</a> &nbsp;&gt;&nbsp; 
-              <a href="#">Những người khốn khổ</a>
-            </div>
-            <div class="image-wrapper">
-              <img src="/src/static/images/sachbo/những người khốn khổ.png" alt="Hình ảnh cuốn sách" class="booksimage">
-            </div>
-        </div>
-
-       <div class="bookinfo">
-            <div class="title-wrapper">
-            <h1 class="book-title">Những người khốn khổ</h1>
-            </div>
-            <div class="details">
-            <div class="hang">
-                <div class="boxhang">
-                    <div class="ttn">Tác giả:</div>
-                    <div><strong>Victor Hugo</strong></div>
-                </div>
-                <div class="boxhang">
-                    <div class="ttn">Thể loại:</div>
-                    <div><strong>Tiểu thuyết</strong></div>
-                </div>
-            </div>
-                <div class="boxhang">
-                    <div class="ttn">Nhà xuất bản:</div>
-                    <div><strong>Kim Đồng</strong></div>
-                </div>
-                
-            </div>
-            <div class="title-wrapper">
-                <h1 class="tomtat">Tóm tắt</h1>
-            </div>
-            <div class="ndtt">"Những người khốn khổ" (Les Misérables) là kiệt tác văn học của đại văn hào Pháp Victor Hugo, 
-                kể về cuộc đời đầy thăng trầm của Jean Valjean, một người tù khổ sai bị xã hội ruồng bỏ, 
-                nhưng nhờ lòng nhân ái và khát vọng sống lương thiện, ông đã vươn lên trở thành người tốt. 
-                Xuyên suốt tác phẩm là hình ảnh những con người nhỏ bé, bất hạnh như cô Fantine, bé Cosette hay chàng 
-                Marius, cùng đấu tranh giữa bóng tối và ánh sáng của đạo đức, công lý và tình yêu. Bằng văn phong sâu 
-                sắc và cảm động, Hugo không chỉ phản ánh hiện thực xã hội Pháp thế kỷ 19 đầy bất công, mà còn gửi gắm 
-                thông điệp về sự cứu rỗi của lòng bao dung và tinh thần nhân đạo.
-            </div>
-        </div>
-
-        <div class="tgblock">   
-            <div class="anhtg">
-              <img src="\src\static\images\tacgia\victorhugoimg.jpg" alt="Hình ảnh cuốn sách" class="boximg">
-            </div>
-            <div class="tentg" >
-                Victor Hugo 
-            </div>
-        </div>
-
+    <div class="footer-column">
+        <h3 style="color: white;">Về chúng tôi</h3>
+        <a href="/src/pages/contact.html">Giới thiệu</a>
+        <a href="#">Cơ cấu tổ chức</a>
+        <a href="#">Lĩnh vực hoạt động</a>
     </div>
-    
-        <!-- Footer -->
-        <div class="footer">
-            <!-- Cột 1: Logo và Email -->
-            <div class="footer-column">
-                <a href="index.html"><div class="logohome2">TC</div></a>
-                <p>Công ty cổ phần sách điện tử TruongChauAnh</p>
-                <div class="footer-email">
-                    <p>TruongChauAnh@gmail.com</p>
-                </div>
-            </div>
-    
-            <!-- Cột 2: Về chúng tôi -->
-            <div class="footer-column">
-                <h3>Về chúng tôi</h3>
-                <a href="pages/contact.html">Giới thiệu</a>
-                <a href="#">Cơ cấu tổ chức</a>
-                <a href="#">Lĩnh vực hoạt động</a>
-            </div>
-    
-            <!-- Cột 3: Thông tin hữu ích -->
-            <div class="footer-column">
-                <h3>Thông tin hữu ích</h3>
-                <a href="#">Thỏa thuận sử dụng dịch vụ</a>
-                <a href="#">Quyền lợi</a>
-                <a href="#">Quy định riêng tư</a>
-            </div>
-    
-            <!-- Cột 4: Tải ứng dụng -->
-            <div class="footer-column">
-                <h3>Tải ứng dụng</h3>
-                <div class="footer-apps">
-                    <img src="/src/static/images/app-store.png" alt="App Store">
-                    <img src="/src/static/images/google-play.png" alt="Google Play">
-                </div>
-            </div>
-            <p class="footer-text">
-                Công ty Cổ phần Sách điện tử TruongChau - Phòng A302 , Số 235 đường Hoàng Quốc Việt, Phường Cổ Nhuế 1, Quận Bắc Từ Liêm, Thành phố Hà Nội. <br>
-                ĐKKD số 0108796432 do SKHĐT TP Hà Nội cấp ngày 26/03/2025 <br>
-                Giấy xác nhận Đăng ký hoạt động phát hành xuất bản phẩm điện tử số 8132/XN-CXBIPH do Cục Xuất bản, In và Phát hành cấp ngày 06/05/2025 <br>
-                Giấy chứng nhận Đăng ký cung cấp dịch vụ nội dung thông tin trên mạng Viễn thông di động số 19/GCN-DĐ do Cục Phát thanh, truyền hình và thông tin điện tử ký ngày 30/04/2025 <br>
-                Số VPGD: 024.73086543 | Số CSKH: 1900545482 nhánh 5 | Hotline: 0877736289 </p>
+    <div class="footer-column">
+        <h3 style="color: white;">Thông tin hữu ích</h3>
+        <a href="#">Thỏa thuận sử dụng dịch vụ</a>
+        <a href="#">Quyền lợi</a>
+        <a href="#">Quy định riêng tư</a>
+    </div>
+    <div class="footer-column">
+        <h3 style="color: white;">Tải ứng dụng</h3>
+        <div class="footer-apps">
+        <img src="/src/static/images/app-store.png" alt="App Store">
+        <img src="/src/static/images/google-play.png" alt="Google Play">
         </div>
-        <script>
-            // Lấy phần tử navbarmain
-            const navbar = document.querySelector('.navbarmain');
-        
-            // Lắng nghe sự kiện cuộn trang
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) { // Kiểm tra nếu cuộn quá 50px
-                    navbar.classList.add('scrolled');
-                } else {
-                    navbar.classList.remove('scrolled');
-                }
-            });
-        </script>
-    </body>
-    </html>
-    
+    </div>
+    <p class="footer-text">
+        Công ty Cổ phần Sách điện tử TruongChauAnh - Phòng A302, Số 235 đường Hoàng Quốc Việt, Phường Cổ Nhuế 1, Quận Bắc Từ Liêm, Thành phố Hà Nội. <br>
+        ĐKKD số 0108796432 do SKHĐT TP Hà Nội cấp ngày 26/03/2025 <br>
+        Giấy xác nhận Đăng ký hoạt động phát hành xuất bản phẩm điện tử số 8132/XN-CXBIPH do Cục Xuất bản, In và Phát hành cấp ngày 06/05/2025 <br>
+        Giấy chứng nhận Đăng ký cung cấp dịch vụ nội dung thông tin trên mạng Viễn thông di động số 19/GCN-DĐ do Cục Phát thanh, truyền hình và thông tin điện tử ký ngày 30/04/2025 <br>
+        Số VPGD: 024.73086543 | Số CSKH: 1900545482 nhánh 5 | Hotline: 0877736289
+    </p>
+    </footer>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const title = params.get('title') 
+    const img = params.get('img') || 'placeholder.jpg';
+    const desc = params.get('desc') || 'Không có mô tả.';
+    const author = params.get('author') || 'khong co ten tac gia';
+    const authorImg = params.get('authorImg') || 'https://via.placeholder.com/100x100?text=No+Image';
+
+    document.getElementById('book-title').textContent = decodeURIComponent(title);
+    document.getElementById('book-image').src = decodeURIComponent(img);
+    document.getElementById('book-description').textContent = decodeURIComponent(desc);
+    document.getElementById('book-author').textContent = decodeURIComponent(author);
+    document.getElementById('author-name').textContent = decodeURIComponent(author);
+    document.getElementById('author-img').src = decodeURIComponent(authorImg);
+  </script>
+</body>
+</html>
