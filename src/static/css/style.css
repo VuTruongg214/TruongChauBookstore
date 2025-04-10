@@ -10,6 +10,21 @@ body {
     background-color: #e48d7a  !important;
     background: linear-gradient(to top, #222,#135058);
 }
+.center-background {
+    position: fixed; /* Giữ cố định khi cuộn trang */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Canh giữa */
+    z-index: -1; /* Đẩy ra sau mọi nội dung */
+    opacity: 0.5; /* Độ trong suốt tùy chỉnh */
+    pointer-events: none; /* Không ảnh hưởng đến thao tác */
+  }
+  
+  .center-background img {
+    width: 600px; /* Kích thước tùy chỉnh */
+    height: auto;
+  }
+  
 /* navbarmain */
 .headermain {
     position: fixed; /* Cố định header */
