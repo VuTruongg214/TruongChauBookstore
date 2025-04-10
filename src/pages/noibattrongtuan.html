@@ -137,6 +137,7 @@
         <button class="next-btn">&#10095;</button>
     </div>
 </div>
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".snbslider-container").forEach(sliderContainer => {
@@ -145,15 +146,14 @@
         const prevBtn = sliderContainer.querySelector(".prev-btn");
         const nextBtn = sliderContainer.querySelector(".next-btn");
 
+        
         let index = 0;
         let totalSlides = slides.length;
-
         // Nhân đôi ảnh để tạo vòng lặp vô hạn
         for (let i = 0; i < totalSlides; i++) {
             let clone = slides[i].cloneNode(true);
             slider.appendChild(clone);
         }
-
         function moveSlide(direction) {
             if (direction === "next") {
                 index++;
