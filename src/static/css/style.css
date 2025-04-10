@@ -174,7 +174,7 @@ body {
     flex-wrap: wrap; /* Để các khối tự động xuống dòng khi hết chỗ */
     gap: 20px; /* Khoảng cách giữa các khối */
     justify-content: space-between; /* Căn đều các khối */
-    padding: 20px; /* Thêm khoảng trống để không bị dính vào mép */
+    padding: 2%; /* Thêm khoảng trống để không bị dính vào mép */
 }
 
 .box {
