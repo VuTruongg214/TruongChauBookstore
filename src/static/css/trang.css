@@ -100,7 +100,7 @@ color: #ddd;
 }
 
 .back-link:hover {
-background: #ddd;
+    background: linear-gradient(to right, #FF3131, #FF914D);
 }
 
 /* navbarmain */
