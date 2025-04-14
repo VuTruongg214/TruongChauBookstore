@@ -1,0 +1,44 @@
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search input {
+    padding: 6px 10px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  .search input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: normal;
+  }
+  
+  .search button {
+    padding: 6px 10px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .search button:hover {
+    background-color: white;
+    color: black;
+  }
+
+.ketqua,
+  #results {
+    display: none;
+  }
+
