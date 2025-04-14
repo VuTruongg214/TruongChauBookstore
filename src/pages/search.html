@@ -31,7 +31,7 @@
     </div>
 
     <div class="ketqua">Kết Quả Cho: <span id="keyword"></span></div>
-    <div class="book-list" id="results"></div>
+    <div class="box-list" id="results"></div>
 
 
 
@@ -72,35 +72,13 @@
         </p>
         </footer>
 
+        <script src="/src/static/js/timkiemsach.js"></script>
         <script>
           const query = new URLSearchParams(location.search).get("query") || "";
           const keywordSpan = document.getElementById("keyword");
           const resultBox = document.getElementById("results");
           const heading = document.querySelector(".ketqua");
         
-          const books = [
-            {
-              title: "Thế giới diệu kỳ",
-              img: "/src/static/images/sachbo/thegioidieuky.jpg",
-              desc: "Cuốn sách dành cho trẻ em, truyền tải thông điệp về trí tưởng tượng và khám phá những điều kỳ diệu trong cuộc sống.",
-              author: "Paulo Coelho",
-              authorImg: "/src/static/images/tacgia/paul_coelho.jpg"
-            },
-            {
-              title: "Đắc Nhân Tâm",
-              img: "/src/static/images/sachle/dacnhantam.jpg",
-              desc: "Một trong những cuốn sách kỹ năng sống nổi tiếng nhất thế giới.",
-              author: "Dale Carnegie",
-              authorImg: "/src/static/images/tacgia/dale_carnegie.jpg"
-            },
-            {
-              title: "Cà phê cùng Tony",
-              img: "/src/static/images/sachle/caphecungtony.jpg",
-              desc: "Những bài học truyền cảm hứng cho giới trẻ Việt Nam.",
-              author: "Tony Buổi Sáng",
-              authorImg: "/src/static/images/tacgia/tony.jpg"
-            }
-          ];
         
           function timKiem() {
             const tukhoa = document.getElementById("tuKhoa").value.trim();
@@ -119,20 +97,21 @@
         
             if (filtered.length > 0) {
               resultBox.style.display = "block";
+              resultBox.classList.add("book-container");
               filtered.forEach(book => {
                 const item = document.createElement("div");
                 item.className = "box";
                 item.innerHTML = `
-                  <a href="/src/pages/tct.html?title=${encodeURIComponent(book.title)}&img=${encodeURIComponent(book.img)}&desc=${encodeURIComponent(book.desc)}&authorImg=${encodeURIComponent(book.authorImg)}&author=${encodeURIComponent(book.author)}">
-                    <img src="${book.img}" alt="${book.title}">
-                  </a>
-                  <h3>${book.title}</h3>
-                  <div class="book-info">
-                    <h3>${book.title}</h3>
-                    <p>Tác giả: ${book.author}</p>
-                    <p>${book.desc}</p>
-                  </div>
+                <a href="/src/pages/tct.html?title=${encodeURIComponent(book.title)}&img=${encodeURIComponent(book.img)}&desc=${encodeURIComponent(book.desc)}&authorImg=${encodeURIComponent(book.authorImg)}&author=${encodeURIComponent(book.author)}">
+                <img src="${book.img}" alt="${book.title}">
+                </a>
+                <h3>${book.title}</h3>
+                <div class="book-info">
+                <p>Tác giả: ${book.author}</p>
+                <p>${book.desc}</p>
+                </div>
                 `;
+
                 resultBox.appendChild(item);
               });
             } else {
