@@ -17,22 +17,21 @@
             <li><a href="/src/pages/author1.html">Tác giả được quan tâm</a></li>
             <li><a href="/src/pages/sachbo.html">Sách bộ</a></li>
             <li><a href="/src/pages/sachle.html">Sách lẻ</a></li>
-            <li><a href="pages/search.html">Tìm kiếm</a></li>
+            <li><a href="/src/pages/search.html">Tìm kiếm</a></li>
         </ul>
         <ul class="nav-right">
-            <li><a href="pages/register.html"><button class="btn-outline-white">Đăng ký</button></a></li>
-            <li><a href="pages/login.html"><button class="btn-outline-white">Đăng nhập</button></a></li>
+            <li><a href="/src/pages/register.html"><button class="btn-outline-white">Đăng ký</button></a></li>
+            <li><a href="/src/pages/login.html"><button class="btn-outline-white">Đăng nhập</button></a></li>
         </ul>
     </div>   
 
     <div class="search">
       <input type="text" id="tuKhoa" placeholder="Tìm kiếm...">
-      <button onclick="timKiem()">tìm kiếm</button>
+      <button onclick="timKiem() ">tìm kiếm</button>
     </div>
-
-    <div class="ketqua">Kết Quả Cho: <span id="keyword"></span></div>
+    
+    <div class="ketqua">Kết Quả Cho: <span id="keyword"></span></div><br><br>
     <div class="box-list" id="results"></div>
-
 
 
     <footer class="footer">
@@ -97,7 +96,7 @@
         
             if (filtered.length > 0) {
               resultBox.style.display = "block";
-              resultBox.classList.add("book-container");
+              
               filtered.forEach(book => {
                 const item = document.createElement("div");
                 item.className = "box";
@@ -107,6 +106,7 @@
                 </a>
                 <h3>${book.title}</h3>
                 <div class="book-info">
+                <h3>${book.title}</h3>
                 <p>Tác giả: ${book.author}</p>
                 <p>${book.desc}</p>
                 </div>

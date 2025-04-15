@@ -132,12 +132,5 @@ const books = [
         author: "Marion Kustenmacher",
         authorImg: "/src/static/images/tacgia/marion_kustenmacher.jpg"
     },
-    {
-        title: "Tình yêu thương gia đình",
-        img: "/src/static/images/sachle/tinhyeuthuonggd.jpg",
-        desc: "Không gì thiêng liêng hơn tình cảm gia đình – nơi cho ta sự chở che vô điều kiện...",
-        author: "Jack Canfield, Mark Victor Hansen",
-        authorImg: "/src/static/images/tacgia/jack_and_mark.jpg"
-    }
     
   ];
