@@ -133,11 +133,17 @@ const books = [
         authorImg: "/src/static/images/tacgia/marion_kustenmacher.jpg"
     },
     {
-        title: "Bí quyết đơn tình yêu",
-        img: "/src/static/images/sachle/biquyetdongianhoatinhyeu.jpg",
-        desc: "Trong một thế giới đầy kỳ vọng và áp lực, tình yêu đôi khi trở thành điều phức tạp...",
-        author: "Marion Kustenmacher",
-        authorImg: "/src/static/images/tacgia/marion_kustenmacher.jpg"
+        title: "Tìm lại tình yêu trong cuộc sống",
+        img: "/src/static/images/sachle/timlaitinhyeutrongcs.jpg",
+        desc: "“Tìm lại tình yêu trong cuộc sống” là một hành trình đầy cảm xúc...",
+        author: "First News",
+        authorImg: "/src/static/images/tacgia/default-author.jpg"
     },
-    
+    {
+        title: "Tình yêu thương gia đình",
+        img: "/src/static/images/sachle/tinhyeuthuonggd.jpg",
+        desc: "Không gì thiêng liêng hơn tình cảm gia đình – nơi cho ta sự chở che vô điều kiện...",
+        author: "Jack Canfield, Mark Victor Hansen",
+        authorImg: "/src/static/images/tacgia/jack_and_mark.jpg"
+    }
   ];

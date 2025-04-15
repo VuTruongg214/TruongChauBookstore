@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/src/static/css/auth.css">
     <link rel="stylesheet" href="/src/static/css/timkiem.css">
     <link rel="icon" type="image/png" href="/src/static/images/logohome1.png">
-  <title>Kết quả</title>
+  <title>Tìm kiếm</title>
 </head>
 <body>
     <div class="navbarmain">
@@ -31,7 +31,7 @@
     </div>
     
     <div class="ketqua">Kết Quả Cho: <span id="keyword"></span></div><br><br>
-    <div class="box-list" id="results" style="display: flex; flex-direction: row; gap: 40px;"></div>
+    <div class="box-list" id="results" style="display: flex; flex-direction: row; gap: 100px;"></div>
 
 
     <footer class="footer">
@@ -103,7 +103,7 @@
                 <img src="${book.img}" alt="${book.title}">
                 </a>
                 <h3>${book.title}</h3>
-                <div class="book-info">
+                <div class="book-info" style="font-style: normal; font-weight: normal; font-family: Arial; font-size: 16px;">
                 <h3>${book.title}</h3>
                 <p>Tác giả: ${book.author}</p>
                 <p>${book.desc}</p>
