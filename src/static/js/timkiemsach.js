@@ -132,5 +132,12 @@ const books = [
         author: "Marion Kustenmacher",
         authorImg: "/src/static/images/tacgia/marion_kustenmacher.jpg"
     },
+    {
+        title: "Bí quyết đơn tình yêu",
+        img: "/src/static/images/sachle/biquyetdongianhoatinhyeu.jpg",
+        desc: "Trong một thế giới đầy kỳ vọng và áp lực, tình yêu đôi khi trở thành điều phức tạp...",
+        author: "Marion Kustenmacher",
+        authorImg: "/src/static/images/tacgia/marion_kustenmacher.jpg"
+    },
     
   ];

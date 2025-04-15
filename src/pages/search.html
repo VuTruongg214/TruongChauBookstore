@@ -31,7 +31,7 @@
     </div>
     
     <div class="ketqua">Kết Quả Cho: <span id="keyword"></span></div><br><br>
-    <div class="box-list" id="results"></div>
+    <div class="box-list" id="results" style="display: flex; flex-direction: row; gap: 40px;"></div>
 
 
     <footer class="footer">
@@ -95,8 +95,6 @@
             );
         
             if (filtered.length > 0) {
-              resultBox.style.display = "block";
-              
               filtered.forEach(book => {
                 const item = document.createElement("div");
                 item.className = "box";

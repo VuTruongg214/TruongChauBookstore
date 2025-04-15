@@ -48,6 +48,12 @@
     color: #fff;
   }
   
+.box-list{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+  
 
 
 
