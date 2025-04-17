@@ -48,8 +48,46 @@
     font-weight: bold;
     color: #fff;
   }
+#results {
+  display: flex;            /* Hiển thị các sách theo hàng ngang */
+  flex-wrap: wrap;          /* Tự động xuống dòng nếu tràn */
+  justify-content: center;  /* Căn giữa các sách */
+  gap: 30px;                /* Khoảng cách giữa các sách */
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
+.box {
+  width: 180px;             /* Cố định chiều rộng mỗi sách */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.box img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.book-info {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.book-title {
+  min-height: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+}
   
-  
+
 
 
 
