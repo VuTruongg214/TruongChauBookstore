@@ -93,7 +93,8 @@ body {
 
 .nav-left {
     display: flex;
-    gap: 60px; /* Khoảng cách giữa các mục */
+    gap: 50px; /* Khoảng cách giữa các mục */
+    flex-wrap: wrap; /* Cho phép xuống dòng khi vượt quá không gian */
 }
 
 .nav-right {
