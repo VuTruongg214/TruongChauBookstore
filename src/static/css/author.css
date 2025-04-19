@@ -116,7 +116,7 @@ body {
 
 .nav-left {
     display: flex;
-    gap: 80px; /* Khoảng cách giữa các mục */
+    gap: 60px; /* Khoảng cách giữa các mục */
 }
 
 .nav-right {
