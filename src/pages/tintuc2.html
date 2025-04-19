@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/src/static/css/trang.css">
+    <link rel="stylesheet" href="/src/static/css/auth.css">
+    <link rel="stylesheet" href="/src/static/css/tintuc.css">
+    <link rel="icon" type="image/png" href="/src/static/images/logohome1.png">
+  <title>Tin tức</title>
+</head>
+<body>
+    <div class="navbarmain">
+        <ul class="nav-left">
+            <li><a href="/src/index.html"><div class="logohome1"><div class="logohome2">TC</div></div></a></li>
+            <li><a href="/src/pages/noibattrongtuan.html">Sách nổi bật trong tuần</a></li>
+            <li><a href="/src/pages/author1.html">Tác giả được quan tâm</a></li>
+            <li><a href="/src/pages/sachbo.html">Sách bộ</a></li>
+            <li><a href="/src/pages/sachle.html">Sách lẻ</a></li>
+            <li><a href="/src/pages/search.html">Tìm kiếm</a></li>
+            <li><a href="/src/pages/tintuc.html">Tin tức</a></li>
+        </ul>
+        <ul class="nav-right">
+            <li><a href="/src/pages/register.html"><button class="btn-outline-white">Đăng ký</button></a></li>
+            <li><a href="/src/pages/login.html"><button class="btn-outline-white">Đăng nhập</button></a></li>
+        </ul>
+    </div>   
+
+    <div class="tintuc">📰 Tin Tức Sách</div>
+
+    <div class="news">
+    <div class="newsbox" onclick="openModal(4)">
+        <h2>Fahasa lọt top doanh nghiệp tiêu biểu nhân 50 năm thống nhất đất nước</h2>
+        <p class="date">Ngày đăng: 15/04/2025</p>
+        <p class="content">
+        Fahasa được chọn là 1 trong 50 doanh nghiệp, đơn vị tiêu biểu có thương hiệu và sản phẩm chủ lực của thành phố, nhân kỷ niệm 50 năm thống nhất đất nước.
+        </p>
+        <a onclick="openModal(4)">Đọc tiếp &raquo;</a>
+    </div>
+    <div class="newsbox" onclick="openModal(5)">
+        <h2>Sách mới của Thomas Pynchon xuất bản vào tháng 10</h2>
+        <p class="date">Ngày đăng: 14/04/2025</p>
+        <p class="content">
+            Tác giả người Mỹ 87 tuổi, nổi tiếng với tiểu thuyết "V.", sẽ trở lại văn đàn sau 12 năm kể từ tác phẩm "Bleeding Edge" xuất bản năm 2013.
+        </p>
+        <a onclick="openModal(5)">Đọc tiếp &raquo;</a>
+    </div>
+    <div class="newsbox" onclick="openModal(6)">
+        <h2>Cựu Bí thư Hà Nội tặng TP.HCM sách nhật ký chiến trường</h2>
+        <p class="date">Ngày đăng: 13/04/2025</p>
+        <p class="content">
+            Nhân kỷ niệm 50 năm thống nhất đất nước, ông Phạm Quang Nghị đã tái bản và in sách để gửi tặng các địa phương đã sống và chiến đấu.
+        </p>
+        <a onclick="openModal(6)">Đọc tiếp &raquo;</a>
+    </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn" onclick="closeModal()">&times;</span>
+          <h2 id="tieude"></h2>
+          <p class="date" id="ngay"></p>
+          <br>
+          <p id="noidung1" class="noibat"></p>
+          <br>
+          <p id="noidung2"></p>
+        </div>
+    </div>
+
+    <div class="pagination">
+        <a href="/src/pages/tintuc.html" class="prev">&laquo; Trước</a>
+        <a href="/src/pages/tintuc.html" class="page-number">1</a>
+        <a href="/src/pages/tintuc2.html" class="page-number">2</a>
+        <a href="#" class="page-number">3</a>
+        <a href="#" class="page-number">4</a>
+        <a href="#" class="page-number">...</a>
+        <a href="/src/pages/tintuc2.html" class="next">   Tiếp &raquo;</a>
+      </div>
+
+    <footer class="footer">
+        <div class="footer-column" style="text-align: center;">
+            <a href="/src/index.html"><div class="logohome2" style="margin: 0 auto;">TC</div></a>
+            <p>Công ty cổ phần sách điện tử TruongChauAnh</p>
+            <div class="footer-email" style="display: flex; align-items: center; justify-content: center;">
+            <img src="/src/static/images/gmail.png" alt="Gmail Icon" style="width: 30px; height: 30px; margin-right: 5px;">
+            <p><br>TruongChauAnh@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-column">
+            <h3 style="color: white;">Về chúng tôi</h3>
+            <a href="/src/pages/contact.html">Giới thiệu</a>
+            <a href="#">Cơ cấu tổ chức</a>
+            <a href="#">Lĩnh vực hoạt động</a>
+        </div>
+        <div class="footer-column">
+            <h3 style="color: white;">Thông tin hữu ích</h3>
+            <a href="#">Thỏa thuận sử dụng dịch vụ</a>
+            <a href="#">Quyền lợi</a>
+            <a href="#">Quy định riêng tư</a>
+        </div>
+        <div class="footer-column">
+            <h3 style="color: white;">Tải ứng dụng</h3>
+            <div class="footer-apps">
+            <img src="/src/static/images/app-store.png" alt="App Store">
+            <img src="/src/static/images/google-play.png" alt="Google Play">
+            </div>
+        </div>
+        <p class="footer-text">
+            Công ty Cổ phần Sách điện tử TruongChauAnh - Phòng A302, Số 235 đường Hoàng Quốc Việt, Phường Cổ Nhuế 1, Quận Bắc Từ Liêm, Thành phố Hà Nội. <br>
+            ĐKKD số 0108796432 do SKHĐT TP Hà Nội cấp ngày 26/03/2025 <br>
+            Giấy xác nhận Đăng ký hoạt động phát hành xuất bản phẩm điện tử số 8132/XN-CXBIPH do Cục Xuất bản, In và Phát hành cấp ngày 06/05/2025 <br>
+            Giấy chứng nhận Đăng ký cung cấp dịch vụ nội dung thông tin trên mạng Viễn thông di động số 19/GCN-DĐ do Cục Phát thanh, truyền hình và thông tin điện tử ký ngày 30/04/2025 <br>
+            Số VPGD: 024.73086543 | Số CSKH: 1900545482 nhánh 5 | Hotline: 0877736289
+        </p>
+    </footer>
+
+    <script src="/src/static/js/tintuc.js"></script>
+    <script>
+        function openModal(id) {
+        const item = newsData.find(n => n.id === id);
+        if (item) {
+            document.getElementById("tieude").innerText = item.tieude;
+            document.getElementById("ngay").innerText = item.ngay || ''; 
+            document.getElementById("noidung1").innerText = item.nd1 || ''; 
+            document.getElementById("noidung2").innerText = item.nd2;
+            document.getElementById("myModal").style.display = "flex";
+        }
+    }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = "none";
+        }
+        
+        window.onclick = function(event) {
+            const modal = document.getElementById('myModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
