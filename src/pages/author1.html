@@ -43,7 +43,17 @@
     <div class="container">
       <h2>Tác giả</h2><hr><br>
       <div class="author-list">
-        <div class="author-card">
+        <div class="author-card" onclick="showAuthorInfo('Ajahn Brahm', 'Ajahn Brahm (tên khai sinh là Peter Betts, sinh ra vào ngày 7 tháng 8 năm 1951), là cao tăng thuộc dòng tu Thượng tọa bộ người Anh gốc Úc.
+
+        Hiện tại Ajahn Brahm là Trụ trì của Tu viện Bodhinyana, ở Serpentine, Tây Úc, Cố vấn Tâm linh cho Hội Phật giáo Victoria, Cố vấn Tâm linh cho Hội Phật giáo Nam Úc, Người bảo trợ Tâm linh của Hiệp hội Phật giáo ở Singapore, Người bảo trợ của Trung tâm Brahm ở Singapore, Người bảo trợ Tâm linh của Trung tâm Bodhikusuma ở Sydney, Cố vấn Tâm linh cho Dự án Anukampa Bhikkhuni ở Vương quốc Liên hiệp Anh và Bắc Ireland, và Giám đốc Tâm linh của Hiệp hội Phật giáo Tây Úc (BSWA). 
+        
+        Các tác phẩm nổi tiếng của ông đã được First News xuất bản là:
+        
+        Hạnh Phúc Mỗi Ngày
+        Buông Bỏ Buồn Buông
+        Hạnh Phúc Đến Từ Sự Biến Mất
+        Tâm Từ
+        Mở Cửa Trái Tim', '/src/static/images/tacgia/Ajahn Brahm.jpg')">
           <img src="/src/static/images/tacgia/Ajahn Brahm.jpg" alt="Ajahn Brahm">
           <h3>Ajahn Brahm</h3>
           <p>Ajahn Brahm là cao tăng thuộc dòng tu Thượng tọa bộ người Anh gốc Úc. Hiện là Trụ trì của Tu viện Bodhinyana ở Serpentine, Tây Úc...</p>
@@ -96,7 +106,28 @@
       </div>
     </div>
   </main>
+  <script>
+    function showAuthorInfo(name, description, imageUrl) {
+    const modalContainer = document.getElementById('modal-container');
+    modalContainer.innerHTML = `
+      <div class="modal">
+      <div class="modal-content">
+        <span class="close-button" onclick="closeModal()">&times;</span>
+        <img src="${imageUrl}" alt="${name}" class="modal-image">
+        <h2>${name}</h2>
+        <p>${description}</p>
+      </div>
+      </div>
+    `;
+    modalContainer.style.display = 'block';
+    }
 
+    function closeModal() {
+    const modalContainer = document.getElementById('modal-container');
+    modalContainer.style.display = 'none';
+    modalContainer.innerHTML = '';
+    }
+  </script>
   <!-- Pagination -->
   <div class="pagination">
     <a href="#" class="prev">&laquo; Trước</a>
