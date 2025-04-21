@@ -9,6 +9,9 @@
   <title>Chi tiết sách</title>
 </head>
 <body>
+
+  <div class="headermain"><img src="/src/static/images/logo.png" class="hinhnen"></div>
+
     <div class="navbarmain">
         <ul class="nav-left">
             <li><a href="/src/index.html"><div class="logohome1"><div class="logohome2">TC</div></div></a></li>
@@ -31,8 +34,6 @@
     <div class="bookinfo">
       <div class="book-title" id="book-title"></div>
       <div class="book-meta"><span>Tác giả:</span> <span id="book-author"></span></div>
-      
-
       <div class="book-description-block">
         <div class="book-description" id="book-description"></div>
         <div class="author-photo">
@@ -40,7 +41,6 @@
           <div class="author-caption" id="author-name"></div>
         </div>
       </div>
-
       <a class="back-link" href="/src/index.html">← Quay lại trang chủ</a>
     </div>
   </div>
@@ -89,7 +89,6 @@
         const desc = params.get('desc') || 'Không có mô tả.';
         const author = params.get('author') || 'không có tên tác giả';
         const authorImg = params.get('authorImg') || 'https://via.placeholder.com/100x100?text=No+Image';
-      
         document.getElementById('book-title').textContent = title;
         document.getElementById('book-image').src = decodedImg;
         document.getElementById('book-description').textContent = desc;
