@@ -11,100 +11,84 @@ body {
     background: linear-gradient(to top, #222,#135058);
     overflow-x: hidden;
 }
+/* Banner quảng cáo cho trang  */
+.headermain {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; 
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 0px;
+    z-index: 1000; 
+}
+/* CSS cho logo của trang */
 .center-background {
-    position: fixed; /* Giữ cố định khi cuộn trang */
+    position: fixed; 
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /* Canh giữa */
     z-index: -1; /* Đẩy ra sau mọi nội dung */
     opacity: 0.5; /* Độ trong suốt tùy chỉnh */
     pointer-events: none; /* Không ảnh hưởng đến thao tác */
-  }
-  
-  .center-background img {
-    width: 600px; /* Kích thước tùy chỉnh */
-    height: auto;
-  }
-  
-/* navbarmain */
-.headermain {
-    position: fixed; /* Cố định header */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px; /* Điều chỉnh chiều cao */
-    font-weight: bold;
-    font-size: 20px;
-    text-align: center;
-    padding-top: 0px;
-    z-index: 1000; /* Giữ header luôn trên cùng */
 }
-.logo{
-    width: 100%;
-    height: 40px;
+.center-background img {
+width: 600px; 
+height: auto;
 }
+
+/* Chữ TC với hiệu ứng chuyển màu */
 .logohome1 {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 60px;
-    background: transparent; /* Nền trong suốt */
+    background: transparent; 
 }
-.hinhnen{
-    width: 100%; /* Chiếm toàn bộ chiều rộng màn hình */
-    background-size: cover; /* Giúp ảnh phóng to theo trang */
-    background-position: center; /* Căn giữa ảnh */
-}
-/* Chữ TC với hiệu ứng chuyển màu */
 .logohome2 {
-    font-size: 60px; /* Kích thước chữ */
+    font-size: 60px; 
     font-weight: bold;
-    font-family: "Times New Roman", serif; /* Phông chữ */
-    background: linear-gradient(to right, #FF3131, #FF914D); /* Gradient từ đỏ sang cam */
+    font-family: "Times New Roman", serif; 
+    background: linear-gradient(to right, #FF3131, #FF914D); /* Gradient(pha màu) từ đỏ sang cam */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; /* Tô màu bằng gradient */
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Đổ bóng nhẹ để nổi bật hơn */
 }
+.hinhnen{
+    width: 100%; 
+    background-size: cover; /* Giúp ảnh phóng to theo trang */
+    background-position: center; 
+}
 
+/* CSS cho navigation bar */
 .navbarmain {
     position: fixed;
-    padding-top: 60px; /* Ngay dưới header */
-    left: 0;
     width: 100%;
-   /*  background: transparent;  Loại bỏ nền  */
     z-index: 999;
     display: flex;
-    justify-content: space-between; /* Đẩy nhóm bên phải về mép phải */
-    align-items: center;
-    padding: 20px;
-    height: 90px;
+    justify-content: space-between; /* Đẩy đăng ký/nhập sang phải */
+    padding: 30px;
 }
 .navbarmain.scrolled {
     background: rgba(0, 0, 0, 0.69);
     transition: all 0.2s ease-in-out; /* Tạo hiệu ứng mượt khi thay đổi */
 }
 
-.navbarmain ul {
-    display: flex;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
 .nav-left {
     display: flex;
-    gap: 50px; /* Khoảng cách giữa các mục */
-    flex-wrap: wrap; /* Cho phép xuống dòng khi vượt quá không gian */
+    gap: 50px; 
 }
 
 .nav-right {
     display: flex;
     gap: 20px;
-    margin-left: auto; /* Đẩy nhóm này sang bên phải */
+    
 }
 
 .navbarmain li {
-    list-style: none;
+    list-style: none; /* Xóa dấu chấm đầu dòng */
 }
 
 .navbarmain a {
@@ -112,8 +96,6 @@ body {
     color: white;
     font-weight: bold;
     display: block;
-    padding: 0px;
-    /* background: transparent; */
     transition: color 0.3s ease-in-out;
 }
 
@@ -135,16 +117,14 @@ body {
     transition: transform 0.5s ease-in-out;
 }
 .slide {
-    width: 100vw; /* Chiếm hết chiều rộng màn hình */
-    height: 100%;  /* Chiếm hết chiều cao của container */
+    width: 100vw;  
+    height: 100%;  
     flex-shrink: 0; /* Đảm bảo ảnh không bị thu nhỏ */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex; 
 }
 .slide img {
-    width: 100%;    /* Chiếm hết chiều rộng của slide */
-    height: 100%;   /* Chiếm hết chiều cao của slide */
+    width: 100%;
+    height: 100%;   
     object-fit: cover; /* Đảm bảo ảnh phủ đầy ô mà không bị méo */
 }
 .controls {
@@ -152,7 +132,6 @@ body {
     top: 50%;
     width: 100%;
     display: flex;
-    justify-content: space-between;
     transform: translateY(-50%);
 }
 .controls button {
@@ -174,11 +153,12 @@ body {
 .main-content {
     display: flex;
     flex-wrap: wrap; /* Để các khối tự động xuống dòng khi hết chỗ */
-    gap: 20px; /* Khoảng cách giữa các khối */
-    justify-content: space-between; /* Căn đều các khối */
-    padding: 2%; /* Thêm khoảng trống để không bị dính vào mép */
+    gap: 20px; 
+    justify-content: space-between; 
+    padding: 2%; 
 }
 
+/* CSS cho các khối sách */
 .box {
     position: relative;
     width: calc(20% - 100px); /* Chia thành 5 cột, trừ khoảng cách */
@@ -187,8 +167,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: visible; /* Cho phép hiển thị phần tử vượt ra ngoài */
-    /* background: transparent; */
     flex-direction: column;
 }
 
@@ -211,7 +189,6 @@ h3{
     transition: transform 0.3s ease-in-out;
 }
 
-/* Hiệu ứng khi di chuột vào ảnh */
 .box:hover img {
     transform: scale(1.1); /* Phóng to nhẹ ảnh */
 }
@@ -222,7 +199,7 @@ h3{
     top: 35%;
     left: 110%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.9); /* Nền đen trong suốt */
+    background: rgba(0, 0, 0, 0.9); 
     color: white;
     text-align: left;
     padding: 10px;
@@ -232,28 +209,22 @@ h3{
     transition: opacity 0.5s ease-in-out;
     z-index: 10;
     pointer-events: none;
-    max-width: 300px; /* Giới hạn chiều rộng tối đa */
-    min-width: 250px; /* Đảm bảo không quá nhỏ */
-    max-height: 250px; /* Giới hạn chiều cao */
+    max-width: 300px; 
+    min-width: 250px; 
+    max-height: 250px; 
     overflow-y: auto; /* Tạo thanh cuộn nếu nội dung quá dài */
 }
 
-/* Hiện thông tin khi hover */
-.box:hover .book-info,
-.book-info:hover {
-    opacity: 1;
-    pointer-events: auto;
+.box:hover .book-info .book-info:hover {
+    opacity: 1; 
+    pointer-events: auto; /* Cho phép tương tác với box thông tin khi hover */
 }
 
-/* Điều chỉnh hướng hiển thị khi có class reverse */
 .box.reverse .book-info {
     left: auto;
     right: 110%; /* Hiển thị box bên trái */
 }
 
-.clearfix {
-    clear: both;
-}
 /* Css cho footer */
 .footer {
     background-color: #1b1b1b;

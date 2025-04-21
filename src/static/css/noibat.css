@@ -39,7 +39,6 @@ p {
 }
 /* Định dạng vị trí của các phần tử Top */
 .top-container {
-    
     font-size: 40px;
     font-weight: bold;
     color: black;
@@ -58,7 +57,7 @@ p {
     
 }
 .toptext {
-    font-size: 60px; /* Kích thước chữ */
+    font-size: 60px; 
     font-weight: bold;
     font-family: "Times New Roman", serif; /* Phông chữ */
     background: linear-gradient(to right, rgb(103, 197, 103), #00ff22  ); /* Gradient từ đỏ sang cam */
