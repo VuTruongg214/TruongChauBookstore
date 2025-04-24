@@ -149,6 +149,7 @@ height: auto;
     font-family: Netflix-sans;
     font-size: 24px;
     color: #fff;
+    padding: 2%;
 }
 .main-content {
     display: flex;
@@ -161,7 +162,8 @@ height: auto;
 /* CSS cho các khối sách */
 .box {
     position: relative;
-    width: calc(20% - 100px); /* Chia thành 5 cột, trừ khoảng cách */
+    flex: 1 1 180px;
+    max-width: 200px;
     height: 250px;
     border-radius: 10px;
     display: flex;

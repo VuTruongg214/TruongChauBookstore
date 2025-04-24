@@ -48,47 +48,86 @@
     font-weight: bold;
     color: #fff;
   }
-  #results {
-    display: flex;            /* Hiển thị các sách theo hàng ngang */
-    flex-wrap: wrap;          /* Tự động xuống dòng nếu tràn */
-    gap: 30px;                /* Khoảng cách giữa các sách */
-    margin-top: 40px;
-    padding: 0 20px;
-  }
-  
-  .box {
-    width: 14%;             /* Cố định chiều rộng mỗi sách */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    color: white;
-    margin-bottom: 10%;
-    
-  }
-  
-  .box img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    object-fit: cover;
-  }
-  
-  .book-info {
-    margin-top: 10px;
-    font-size: 14px;
-  }
-  
-  .book-title {
-    min-height: 2.5em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-weight: bold;
-  }
-  
+#results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 0 40px;
+  margin-top: 40px;
+}
 
+.box {
+  flex: 1 1 180px;
+  max-width: 220px;
+  height: 250px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  margin-bottom: 8%;
+}
 
+.book-info {
+  margin-top: 10px;
+  font-size: 14px;
+}
+.book-title {
+  min-height: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+}
+.box h3 {
+  font-size: 18px;
+  color: #ffffff;
+  margin-top: 10px;
+}
+h3{
+  min-height: 2.5em; /* Điều chỉnh theo số dòng mong muốn */
+  display: flex;
+  align-items: center; /* Căn giữa nếu nội dung ít hơn */
+  text-align: center;
+}
+.box img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
 
+.box:hover img {
+  transform: scale(1.1); /* Phóng to nhẹ ảnh */
+}
+.book-info {
+  position: absolute;
+  top: 35%;
+  left: 110%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.9); 
+  color: white;
+  text-align: left;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 10;
+  pointer-events: none;
+  max-width: 300px; 
+  min-width: 250px; 
+  max-height: 250px; 
+  overflow-y: auto; /* Tạo thanh cuộn nếu nội dung quá dài */
+}
+.box:hover .book-info, 
+.book-info:hover {
+  opacity: 1; 
+  pointer-events: auto; /* Cho phép tương tác với box thông tin khi hover */
+}
 

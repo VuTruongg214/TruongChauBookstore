@@ -33,7 +33,7 @@
     </div>
   
     <div class="ketqua">Kết Quả Cho: <span id="keyword"></span></div><br><br>
-    <div class="box-list" id="results" style="display: flex; flex-direction: row; gap: 50px;"></div>
+    <div class="box-list" id="results" style="display: flex; flex-direction: row; gap: 50px; padding-top: 2%;"></div>
 
 
     <footer class="footer">
@@ -97,24 +97,42 @@
             );
         
             if (filtered.length > 0) {
-              filtered.forEach(book => {
-                const item = document.createElement("div");
-                item.className = "box";
-                item.innerHTML = `
+            filtered.forEach(book => {
+              const item = document.createElement("div");
+              item.className = "box";
+              item.innerHTML = `
                 <a href="/src/pages/tct.html?title=${encodeURIComponent(book.title)}&img=${encodeURIComponent(book.img)}&desc=${encodeURIComponent(book.desc)}&authorImg=${encodeURIComponent(book.authorImg)}&author=${encodeURIComponent(book.author)}">
-                <img src="${book.img}" alt="${book.title}">
+                  <img src="${book.img}" alt="${book.title}">
                 </a>
                 <h3 class="book-title">${book.title}</h3>
                 <div class="book-info" style="font-style: normal; font-weight: normal; font-family: Arial; font-size: 18px;">
-                <h3>${book.title}</h3>
-                <p>Tác giả: ${book.author}</p>
-                <p>${book.desctt}</p>
+                  <h3>${book.title}</h3>
+                  <p>Tác giả: ${book.author}</p>
+                  <p>${book.desctt}</p>
                 </div>
-                `;
+              `;
 
-                resultBox.appendChild(item);
-              });
-            } else {
+              resultBox.appendChild(item);
+            });
+
+            // Sau khi render xong TẤT CẢ sách -> kiểm tra vị trí để điều chỉnh hướng book-info
+            const allBoxes = document.querySelectorAll('.box');
+            allBoxes.forEach(box => {
+              const rect = box.getBoundingClientRect();
+              const bookInfo = box.querySelector('.book-info');
+
+              if (rect.right + 300 > window.innerWidth) {
+                bookInfo.style.left = "auto";
+                bookInfo.style.right = "110%";
+              } else {
+                // Đảm bảo các sách không bị chuyển trái nếu không cần
+                bookInfo.style.left = "110%";
+                bookInfo.style.right = "auto";
+              }
+            });
+          }
+
+          else {
               resultBox.style.display = "block";
               resultBox.innerHTML = `<p>Không tìm thấy kết quả nào cho từ khóa "<b>${query}</b>"</p>`;
             }
