@@ -314,21 +314,6 @@
  
          // Tự động chuyển slide mỗi 3 giây
          setInterval(nextSlide, 5000);
-
-         // Xử lý khi nhấn nút
-        function searchBook() {
-            const input = document.getElementById('searchInput').value.trim();
-                if (input) {
-                    location.href = `/src/pages/search.html?query=${encodeURIComponent(input)}`;
-            }
-        }
-
-        // Xử lý khi nhấn Enter
-        document.getElementById('searchInput').addEventListener('keydown', function(e) {
-            if (e.key === 'Enter') {
-                searchBook();
-            }
-        });
      </script>
 
 <!-- Phần liên hệ cuối trang -->

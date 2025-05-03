@@ -54,10 +54,11 @@
   gap: 30px;
   padding: 0 40px;
   margin-top: 40px;
+  justify-content: center;
 }
 
 .box {
-  flex: 1 1 180px;
+  flex: calc(25% - 20px); 
   max-width: 220px;
   height: 250px;
   border-radius: 10px;
@@ -130,4 +131,3 @@ h3{
   opacity: 1; 
   pointer-events: auto; /* Cho phép tương tác với box thông tin khi hover */
 }
-
